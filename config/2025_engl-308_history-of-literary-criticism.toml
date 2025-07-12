@@ -1,0 +1,67 @@
+[instructor]
+name = "Tyler Shoemaker"
+email = "tshoemaker@tamu.edu"
+office = "LAAH 480"
+hours = "TBD"
+
+[course]
+number = "ENGL 308"
+title = "History of Literary Criticism"
+section = 500
+credits = 3
+description = """
+History of literary thought from antiquity to the present, including writings \
+such as Plato, Aristotle, 'Longinus,' Sidney, Shelley, and Dryden; analysis \
+of genres such as tragedy, lyric, and film; critical approaches such as new \
+criticism, structuralism, deconstruction, Marxism, feminism, new historicism, \
+and film studies.\
+"""
+prerequisites = "3 credits of literature at 200-level or above"
+designation = "None"
+
+[schedule]
+year = "2025"
+start = "08-25"
+end = "12-08"
+weekdays = "MWF" 
+time = "8:00--8:50am"
+location = "LAAH 372"
+exclude = [ "09-01", "10-13", "10-14", "11-26", "11-27", "11-28" ]
+
+[[objectives]]
+description = "TBD"
+
+[[objectives]]
+description = "TBD"
+
+[[books]]
+title = "_The Norton Anthology of Theory and Criticism_ (3rd ed)"
+author = "Williams et al"
+isbn = "978-0393602951"
+
+[[assignments]]
+name = "Exegesis 1"
+points = 20
+due = "By X"
+
+[[assignments]]
+name = "Exegesis 2"
+points = 20
+due = "By X"
+
+[[assignments]]
+name = "Exegesis 3"
+points = 20
+due = "By X"
+
+[[assignments]]
+name = "Final exam"
+points = 30
+due = "TBD"
+
+[[assignments]]
+name = "Participation"
+points = 10
+due = "Ongoing"
+
+
