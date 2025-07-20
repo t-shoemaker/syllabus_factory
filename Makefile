@@ -19,11 +19,11 @@ define check-files
     @test -f "$(CONFIG)" || (echo "Config file $(CONFIG) not found" && exit 1)
 endef
 
-compile:
+md:
 	$(check-files)
 	@python3 src/main.py -c $(CONFIG) -f $(INPUT_FILES) > $(MD_OUTPUT)
 
-render: 
+docx:
 	$(check-files)
 	@pandoc -s $(MD_OUTPUT) \
 		-f markdown -t docx \
@@ -33,10 +33,10 @@ render:
 		-o $(DOCX_OUTPUT)
 
 $(MD_OUTPUT): $(CONFIG) $(INPUT_FILES)
-	@$(MAKE) compile CONFIG=$(CONFIG)
+	@$(MAKE) md CONFIG=$(CONFIG)
 
 $(DOCX_OUTPUT): $(MD_OUTPUT)
-	@$(MAKE) render CONFIG=$(CONFIG)
+	@$(MAKE) docx CONFIG=$(CONFIG)
 
 open: $(DOCX_OUTPUT)
 	@open $(DOCX_OUTPUT)
@@ -54,8 +54,8 @@ get-ref:
 
 help:
 	@echo "Available targets:"
-	@echo "  compile CONFIG=<name>      - Compile markdown"
-	@echo "  render CONFIG=<name>       - Render to docx"
+	@echo "  md CONFIG=<name>           - Compile markdown"
+	@echo "  docx CONFIG=<name>         - Render to docx"
 	@echo "  clean CONFIG=<name>        - Clean specific config files"
 	@echo "  clean-all                  - Clean all generated files"
 	@echo "  get-ref                    - Download reference document"

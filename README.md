@@ -34,7 +34,14 @@ are then rendered into a single Word document.
 Creating a Syllabus
 -------------------
 
-Steps:
+Before creating a syllabus, ensure you have local versions of the untracked
+directories
+
+```sh
+mkdir -p assets syllabi/docx syllabi/md
+```
+
+With these directories made, do the following:
 
 1. Make a new config file and save it to `configs` using the format
    `<YYYY>_<COURSE-CODE>_<COURSE-NAME>.toml`
@@ -46,20 +53,21 @@ Steps:
 
 3. Compile the markdown
    ```sh
-   make compile
+   make md
    ```
 
 4. Fill out the schedule in `syllabi/md/<YYYY>_<COURSE-CODE>_<COURSE-NAME>.md`
 
-5. (Optional) Download a .docx reference file from the Minimum Syllabus
-   Requirements page. It will automatically save to `assets/template.docx`
+5. Download a .docx reference file from the Minimum Syllabus Requirements page.
+   It will automatically save to `assets/template.docx`
    ```sh
    make get-ref
    ```
+   You do not need to run this step again once you have this file
 
 6. Render the markdown to a Word doc
    ```sh
-   make render
+   make docx
    ```
 
 Need help? Run the following to see available targets
