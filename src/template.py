@@ -2,13 +2,12 @@
 # -*- coding: utf-8 -*-
 
 import argparse
-from pathlib import Path
-import sys
 import shutil
-from urllib.request import urlretrieve
-from urllib.parse import urljoin
+import sys
 from html.parser import HTMLParser
-
+from pathlib import Path
+from urllib.parse import urljoin
+from urllib.request import urlretrieve
 
 SENATE_PAGE = "https://facultysenate.tamu.edu"
 MSR_PAGE = urljoin(
@@ -17,7 +16,10 @@ MSR_PAGE = urljoin(
 
 
 class MSRParser(HTMLParser):
-    links = []
+    def __init__(self):
+        """Initialize the parser."""
+        super().__init__()
+        self.links = []
 
     def handle_starttag(self, tag, attrs):
         """Store .docx links from hrefs in an HTML document.
@@ -50,6 +52,10 @@ class MSRParser(HTMLParser):
         SystemExit
             If user cancels with Ctrl+C
         """
+        if not self.links:
+            print("No .docx files found")
+            sys.exit(1)
+
         output = [
             f"[{i + 1}] {link.name}" for i, link in enumerate(self.links)
         ]
@@ -57,7 +63,7 @@ class MSRParser(HTMLParser):
 
         try:
             while True:
-                err = f"Invalid input. Must be a number: 1-{len(self.links)}\n"
+                err = f"Invalid input. Must be a number: 1-{len(self.links)}"
                 select = input(
                     f"Select one of the following to download:\n{output}\nDownload: "
                 )
@@ -82,14 +88,34 @@ class MSRParser(HTMLParser):
 
         Parameters
         ----------
-        filename : Path
+        filename : Path, optional
             Name of the output file
+
+        Raises
+        ------
+        SystemExit
+            If download fails or user cancels during selection
         """
         select = self._prompt_user()
         to_download = urljoin(SENATE_PAGE, str(self.links[select]))
-        path, headers = urlretrieve(to_download)
-        filename = self.links[select].name if not filename else filename
-        shutil.move(path, filename)
+
+        try:
+            path, headers = urlretrieve(to_download)
+            filename = self.links[select].name if not filename else filename
+            shutil.move(path, filename)
+            print(f"Successfully downloaded: {self.links[select].name}")
+        except Exception as e:
+            print(f"Download failed: {e}")
+            try:
+                Path(path).unlink(missing_ok=True)
+            except (NameError, FileNotFoundError):
+                pass
+            sys.exit(1)
+        finally:
+            try:
+                Path(path).unlink(missing_ok=True)
+            except (NameError, FileNotFoundError):
+                pass
 
 
 def main(args):

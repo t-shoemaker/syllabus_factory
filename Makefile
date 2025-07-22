@@ -50,7 +50,7 @@ clean-all:
 	rm -rf $(SYLLABUS_DIR)/md/* $(SYLLABUS_DIR)/docx/*
 
 get-ref:
-	@python3 src/download_ref.py -f $(DOCX_REF)
+	@python3 src/template.py -f $(DOCX_REF)
 
 help:
 	@echo "Available targets:"
