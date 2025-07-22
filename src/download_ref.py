@@ -66,7 +66,7 @@ class MSRParser(HTMLParser):
                 except ValueError:
                     print(err)
                     continue
-                if 0 <= (select - 1) <= len(self.links):
+                if 1 <= select <= len(self.links):
                     break
                 else:
                     print(err)
