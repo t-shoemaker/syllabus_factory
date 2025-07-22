@@ -2,14 +2,14 @@
 # -*- coding: utf-8 -*-
 
 import argparse
-from pathlib import Path
 import tomllib
-from textwrap import wrap
+from pathlib import Path
 from string import Template
+from textwrap import wrap
 
-from utils import flatten_config
-from schedule import Scheduler
 from formatting import Formatter
+from schedule import Scheduler
+from utils import flatten_config
 
 
 def main(args):
