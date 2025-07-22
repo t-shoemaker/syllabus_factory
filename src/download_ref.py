@@ -3,10 +3,11 @@
 
 import argparse
 from pathlib import Path
+import sys
+import shutil
 from urllib.request import urlretrieve
 from urllib.parse import urljoin
 from html.parser import HTMLParser
-import shutil
 
 
 SENATE_PAGE = "https://facultysenate.tamu.edu"
@@ -43,28 +44,38 @@ class MSRParser(HTMLParser):
         -------
         int
             The index position of the file to download
+
+        Raises
+        ------
+        SystemExit
+            If user cancels with Ctrl+C
         """
         output = [
             f"[{i + 1}] {link.name}" for i, link in enumerate(self.links)
         ]
         output = "\n".join(output)
 
-        while True:
-            err = f"Invalid input. Must be a number: 1-{len(self.links)}\n"
-            select = input(
-                f"Select one of the following to download:\n{output}\nDownload: "
-            )
-            try:
-                select = int(select)
-            except ValueError:
-                print(err)
-                continue
-            if 0 <= (select - 1) <= len(self.links):
-                break
-            else:
-                print(err)
+        try:
+            while True:
+                err = f"Invalid input. Must be a number: 1-{len(self.links)}\n"
+                select = input(
+                    f"Select one of the following to download:\n{output}\nDownload: "
+                )
+                try:
+                    select = int(select)
+                except ValueError:
+                    print(err)
+                    continue
+                if 0 <= (select - 1) <= len(self.links):
+                    break
+                else:
+                    print(err)
 
-        return select - 1
+            return select - 1
+
+        except KeyboardInterrupt:
+            print("\nDownload cancelled")
+            sys.exit(0)
 
     def download(self, filename=None):
         """Download a .docx file.
