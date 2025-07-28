@@ -83,7 +83,7 @@ class Scheduler:
 
             # Is the day an excluded one? If so, mark it
             if date in exclude:
-                day += "\n\n**No class**"
+                day += "\n\n+ **No class**"
 
             schedule.append(day)
             date += timedelta(days=1)
