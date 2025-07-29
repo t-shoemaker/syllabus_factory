@@ -2,7 +2,7 @@
 name = "Tyler Shoemaker"
 email = "tshoemaker@tamu.edu"
 office = "LAAH 480"
-hours = "TBD"
+hours = "MW 3:00--4:00pm"
 
 [course]
 number = "ENGL 308"
@@ -14,7 +14,15 @@ History of literary thought from antiquity to the present, including writings \
 such as Plato, Aristotle, 'Longinus,' Sidney, Shelley, and Dryden; analysis \
 of genres such as tragedy, lyric, and film; critical approaches such as new \
 criticism, structuralism, deconstruction, Marxism, feminism, new historicism, \
-and film studies.\
+and film studies.
+
+Our overarching concern will be the problem of representation: What is the \
+nature of representation? How does it differ from the real? What is it for? \
+How do we assess what a representation represents? After posing these \
+questions in the context of classical renaissance texts, we will make \
+multiple passes through the last 150 years of critical thought, tracing the \
+dynamics of representation across art, language, culture, politics, psychic \
+life, and subjectivity.\
 """
 prerequisites = "3 credits of literature at 200-level or above"
 designation = "None"
@@ -29,35 +37,44 @@ location = "LAAH 372"
 exclude = [ "09-01", "10-13", "10-14", "11-26", "11-27", "11-28" ]
 
 [[objectives]]
-description = "TBD"
+description = """
+Identify and explain key themes and ideas in the history of literary criticism\
+"""
 
 [[objectives]]
-description = "TBD"
+description = """
+Gain broad familiarity with various critical movements and approaches\
+"""
+
+[[objectives]]
+description = """
+Analyze critical arguments and use those arguments to construct your own\
+"""
 
 [[books]]
-title = "_The Norton Anthology of Theory and Criticism_ (3rd ed)"
+title = "_The Norton Anthology of Theory and Criticism_, 3rd ed."
 author = "Williams et al"
 isbn = "978-0393602951"
 
 [[assignments]]
 name = "Exegesis 1"
 points = 20
-due = "By X"
+due = "By 9/26"
 
 [[assignments]]
 name = "Exegesis 2"
 points = 20
-due = "By X"
+due = "By 10/31"
 
 [[assignments]]
 name = "Exegesis 3"
 points = 20
-due = "By X"
+due = "By 12/5"
 
 [[assignments]]
 name = "Final exam"
 points = 30
-due = "TBD"
+due = "12/11"
 
 [[assignments]]
 name = "Participation"
