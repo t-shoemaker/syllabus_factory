@@ -35,7 +35,11 @@ def main(args):
 
     # Flatten the schedule config and wrap the course description
     syllabus = flatten_config(syllabus)
-    description = "\n".join(wrap(syllabus["course_description"], width=79))
+    description = "\n".join(
+        wrap(
+            syllabus["course_description"], width=79, replace_whitespace=False
+        )
+    )
     syllabus.update({"course_description": description})
 
     # Open the markdown files, then unpack syllabus values in the mapping and
