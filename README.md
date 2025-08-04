@@ -38,7 +38,7 @@ Before creating a syllabus, ensure you have local versions of the untracked
 directories
 
 ```sh
-mkdir -p assets syllabi/docx syllabi/md
+mkdir -p assets syllabi/docx syllabi/html syllabi/md
 ```
 
 With these directories made, do the following:
@@ -68,6 +68,11 @@ With these directories made, do the following:
 6. Render the markdown to a Word doc
    ```sh
    make docx
+   ```
+
+7. (Optional) Render the markdown to an HTML doc
+   ```sh
+   make html
    ```
 
 Need help? Run the following to see available targets
