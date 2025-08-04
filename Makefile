@@ -20,11 +20,11 @@ define check-files
     @test -f "$(CONFIG)" || (echo "Config file $(CONFIG) not found" && exit 1)
 endef
 
-md:
+$(MD_OUTPUT): $(CONFIG) $(INPUT_FILES)
 	$(check-files)
 	@python3 src/main.py -c $(CONFIG) -f $(INPUT_FILES) > $(MD_OUTPUT)
 
-docx:
+$(DOCX_OUTPUT): $(MD_OUTPUT)
 	$(check-files)
 	@pandoc -s $(MD_OUTPUT) \
 		-f markdown -t docx \
@@ -33,7 +33,7 @@ docx:
 		--lua-filter=$(FILTER_DIR)/tables.lua \
 		-o $(DOCX_OUTPUT)
 
-html:
+$(HTML_OUTPUT): $(MD_OUTPUT)
 	$(check-files)
 	@pandoc -s $(MD_OUTPUT) \
 		-f markdown -t html \
@@ -41,17 +41,12 @@ html:
 		--lua-filter=$(FILTER_DIR)/tables.lua \
 		-o $(HTML_OUTPUT)
 
-$(MD_OUTPUT): $(CONFIG) $(INPUT_FILES)
-	@$(MAKE) md CONFIG=$(CONFIG)
-
-$(DOCX_OUTPUT): $(MD_OUTPUT)
-	@$(MAKE) docx CONFIG=$(CONFIG)
-
-$(HTML_OUTPUT): $(MD_OUTPUT)
-	@$(MAKE) html CONFIG=$(CONFIG)
+md: $(MD_OUTPUT)
+docx: $(DOCX_OUTPUT)
+html: $(HTML_OUTPUT)
 
 open: $(DOCX_OUTPUT)
-	@open $(DOCX_OUTPUT)
+	@open $<
 
 clean:
 	@test -n "$(CONFIG)" || (echo "CONFIG is required. Usage: make $@ CONFIG=<name>" && exit 1)
