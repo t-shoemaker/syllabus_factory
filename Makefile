@@ -65,7 +65,7 @@ open:
 			*) echo "Unknown format: $$FORMAT" && exit 1 ;; \
 		esac; \
 	else \
-		echo "No format generated for $(CONFIG_NAME). Try 'make <format> CONFIG=<name> first'" \
+		echo "No format generated for $(CONFIG_NAME). Run: make <format> CONFIG=<name>"; \
 		exit 1; \
 	fi
 
