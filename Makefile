@@ -3,6 +3,7 @@ FILTER_DIR := $(realpath filters)
 SYLLABUS_DIR := $(realpath syllabi)
 INPUT_FILES := $(wildcard docs/*.md)
 DOCX_REF := $(realpath assets/template.docx)
+LAST_OPENED := $(SYLLABUS_DIR)/.last-opened
 
 ifdef CONFIG
     CONFIG_NAME := $(basename $(notdir $(CONFIG)))
@@ -42,11 +43,31 @@ $(HTML_OUTPUT): $(MD_OUTPUT)
 		-o $(HTML_OUTPUT)
 
 md: $(MD_OUTPUT)
-docx: $(DOCX_OUTPUT)
-html: $(HTML_OUTPUT)
+	@echo "md" > $(LAST_OPENED)
 
-open: $(DOCX_OUTPUT)
-	@open $<
+docx: $(DOCX_OUTPUT)
+	@echo "docx" > $(LAST_OPENED)
+
+html: $(HTML_OUTPUT)
+	@echo "html" > $(LAST_OPENED)
+
+# State tracking enables dynamic file opening based on the filetype. Each of
+# the above aliases records its associated filetype, which open draws from when
+# called
+open:
+	@test -n "$(CONFIG)" || (echo "CONFIG is required. Usage: $@ CONFIG=<name>" && exit 1)
+	@if [ -f "$(LAST_OPENED)" ]; then \
+		FORMAT=$$(cat $(LAST_OPENED)); \
+		case $$FORMAT in \
+			md ) open $(MD_OUTPUT) ;; \
+			docx) open $(DOCX_OUTPUT) ;; \
+			html) open $(HTML_OUTPUT) ;; \
+			*) echo "Unknown format: $$FORMAT" && exit 1 ;; \
+		esac; \
+	else \
+		echo "No format generated for $(CONFIG_NAME). Try 'make <format> CONFIG=<name> first'" \
+		exit 1; \
+	fi
 
 clean:
 	@test -n "$(CONFIG)" || (echo "CONFIG is required. Usage: make $@ CONFIG=<name>" && exit 1)
@@ -61,9 +82,10 @@ get-ref:
 
 help:
 	@echo "Available targets:"
-	@echo "  md CONFIG=<name>           - Compile markdown"
-	@echo "  docx CONFIG=<name>         - Render to docx"
-	@echo "  html CONFIG=<name>         - Render to html"
-	@echo "  clean CONFIG=<name>        - Clean a config's generated files"
-	@echo "  clean-all                  - Clean all generated files"
-	@echo "  get-ref                    - Download reference docx template"
+	@echo "  md CONFIG=<name>             - Compile markdown"
+	@echo "  docx CONFIG=<name>           - Render to docx"
+	@echo "  html CONFIG=<name>           - Render to html"
+	@echo "  <format> open CONFIG=<name>  - Open the rendered file"
+	@echo "  clean CONFIG=<name>          - Clean a config's generated files"
+	@echo "  clean-all                    - Clean all generated files"
+	@echo "  get-ref                      - Download reference docx template"
