@@ -15,6 +15,7 @@ are then rendered into a single Word document.
 ├── src             Python scripts for asset downloads and compiling markdown
 ├── syllabi         [Untracked] Makefile output
 │   ├── docx        Rendered syllabi
+│   ├── html        Webpage versions of syllabi
 │   └── md          Compiled markdown
 ├── Makefile        Makefile for creating a syllabus
 └── README.md       Repository README
