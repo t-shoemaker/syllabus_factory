@@ -31,6 +31,9 @@ student to make up work missed because of an unexcused absence" ([Student Rule
 Students who request an excused absence are expected to uphold the Aggie Honor
 Code and Student Conduct Code. (See [Student Rule 24][rule-24].)
 
+[rule-7]: https://student-rules.tamu.edu/rule07
+[rule-24]: https://student-rules.tamu.edu/rule24
+
 ### Academic Integrity Statement and Policy
 
 "An Aggie does not lie, cheat or steal, or tolerate those who do."
@@ -46,6 +49,35 @@ _You can learn more about the Aggie Honor System Office Rules and Procedures,
 academic integrity, and your rights and responsibilities at
 [aggiehonor.tamu.edu][aggie-honor]._
 
+[rule-20]: https://aggiehonor.tamu.edu/Rules-and-Procedures/Rules/Honor-System-Rules
+[aggie-honor]: https://aggiehonor.tamu.edu
+
+### Notice of Nondiscrimination
+
+Texas A&M University is committed to providing safe and non-discriminatory
+learning, living, and work environments for all members of the University
+community. The University provides equal opportunity to all employees,
+students, applicants for employment or admission, and the public regardless of
+race, color, sex (including pregnancy and related conditions), religion,
+national origin, age, disability, genetic information, or veteran status. Texas
+A&M University will promptly, thoroughly, and fairly investigate and resolve
+all complaints of discrimination, harassment (including sexual harassment),
+complicity and related retaliation based on a protected class in accordance
+with System Regulation 08.01.01, University Rule 08.01.01.M1, Standard
+Administrative Procedure (SAP) 08.01.01.M1.01, and applicable federal and state
+laws. In accordance with Title IX and its implementing regulations, Texas A&M
+does not discriminate on the basis of sex in any educational program or
+activity, including admissions and employment. The following person has been
+designated to handle inquiries and complaints regarding the non-discrimination
+policies: Jennifer M. Smith, TAMU Associate VP & Title IX Coordinator at YMCA
+Ste 108, College Station, TX 77843, 979-458-8407, or email
+[civilrights@tamu.edu](mailto:civilrights@tamu.edu). For other reporting
+options, visit [https://ocrcas.ed.gov/contact-ocr][ocrcas] to locate the
+address and phone number of the office that serves your area, or call
+1-800-421-3481.
+
+[ocrcas]: https://ocrcas.ed.gov/contact-ocr 
+
 ### Americans with Disabilities Act (ADA) Policy
 
 Texas A&M University is committed to providing equitable access to learning
@@ -57,48 +89,56 @@ health, sensory, physical, or chronic health conditions. All students are
 encouraged to discuss their disability related needs with Disability Resources
 and their instructors as soon as possible.
 
-_Disability Resources is located in the Student Services Building or at (979)
-845-1637 or visit [disability.tamu.edu][disability-services]._
+To request academic accommodations, contact the designated ADA office based on
+your location: 
 
-### Title IX and Statements on Limits to Confidentiality
++ Texas A&M University, College of Nursing, College of Dentistry, Irma Lerma
+  Rangel College of Pharmacy College Station, College of Medicine, School of
+  Public Health, Institute of Biosciences and Technology, EnMed Program, Bush
+  School in Washington DC, Mays Business School – CityCentre, TAMU Engineering
+  Academies, Texas A&M University Higher Education Center at McAllen and Texas
+  A&M University at Galveston should contact [Disability
+  Resources][disability-resources] at (979) 845-1637 
+  or [disability@tamu.edu](mailto:disability@tamu.edu). 
++ Texas A&M University School of Law should contact the Office of Student
+  Affairs at (817) 212-4111
+  or [law-disability@law.tamu.edu](mailto:law-disability@law.tamu.edu) to
+  request accommodations. 
++ Irma Lerma Rangel College of Pharmacy in Kingsville should contact the
+  Disability Resource Center at Texas A&M University - Kingsville at (361)
+  593-3024 or [drc.center@tamuk.edu](mailto:drc.center@tamuk.edu) to request 
+  accommodations.
++ Texas A&M University College of Veterinary Medicine & Biomedical Sciences in
+  Canyon should contact the Office of Student Accessibility at West Texas A&M
+  University – Canyon at (806) 651-2335 or [osa@wtamu.edu](mailto:osa@wtamu.edu).
++ Texas A&M University at Qatar (TAMUQ) should contact the campus psychologist,
+  Dr. Steve Wilson +974-4423-0047 
+  or [stephen.wilson@qatar.tamu.edu](mailto:stephen.wilson@qatar.tamu.edu).
+\
 
-Texas A&M University is committed to fostering a learning environment that is
-safe and productive for all. University policies and federal and state laws
-prohibit gender-based discrimination and sexual harassment, including sexual
-assault, sexual exploitation, domestic violence, dating violence, and stalking.
+If you are experiencing difficulties with your approved accommodations, contact
+the office responsible for approving your accommodations or the Texas A&M ADA
+Coordinator Julie Kuder at
+[ADA.Coordinator@tamu.edu](mailto:ADA.Coordinator@tamu.edu) or (979) 458-8407. 
 
-With the exception of some medical and mental health providers, all university
-employees (including full and part-time faculty, staff, paid graduate
-assistants, student workers, etc.) are Mandatory Reporters and must report to
-the Title IX Office if the employee experiences, observes, or becomes aware of
-an incident that meets the following conditions (see [University Rule
-08.01.01.M1][u-rule-8]):
+[disability-resources]: https://disability.tamu.edu/
 
-+ The incident is reasonably believed to be discrimination or harassment. 
-+ The incident is alleged to have been committed by or against a person who, at
-  the time of the incident, was (1) a student enrolled at the University or (2)
-  an employee of the University.\
+### Pregnancy Accommodations
 
-Mandatory Reporters must file a report regardless of how the information comes
-to their attention – including but not limited to face-to-face conversations, a
-written class assignment or paper, class discussion, email, text, or social
-media post. Although Mandatory Reporters must file a report, in most instances,
-a person who is subjected to the alleged conduct will be able to control how
-the report is handled, including whether or not to pursue a formal
-investigation. The University's goal is to make sure you are aware of the range
-of options available to you and to ensure access to the resources you need.
+Texas A&M provides reasonable accommodations to students due to pregnancy
+and/or related conditions, such as childbirth, recovery and lactation. 
+Students should contact the University’s [Pregnancy
+Coordinator][pregnancy-coordinator] as soon as they
+become aware of the need for accommodation. Depending on the circumstances,
+accommodations could include extended time to complete assignments or exams,
+changes in course sequence, or modifications to the physical classroom
+environment. Texas A&M will also allow a voluntary leave of absence, ensure the
+availability of lactation space, and maintain grievance procedures to provide
+for the prompt and equitable resolution of complaints of sex
+discrimination. For information regarding pregnancy accommodations, email
+[TIX.Pregnancy@tamu.edu](mailto:TIX.Pregnancy@tamu.edu).
 
-Students wishing to discuss concerns related to mental and/or physical health
-in a confidential setting are encouraged to make an appointment with
-[University Health Services][health-services] or download the [TELUS Health
-Student Support app][telus] for 24/7 access to professional counseling in
-multiple languages. Walk-in services for urgent, non-emergency needs are
-available during normal business hours at University Health Services locations;
-call 979.458.4584 for details.
-
-_Students can learn more about filing a report, accessing supportive resources,
-and navigating the Title IX investigation and resolution process on the
-University's [Title IX webpage][title-ix]._
+[pregnancy-coordinator]: https://titleix.tamu.edu/title-ix-and-pregnancy-students/
 
 ### Statement on Mental Health and Wellness
 
@@ -115,14 +155,35 @@ _Students needing a listening ear can contact University Health Services
 (979.458.4584) 24-hour emergency help is also available through the 988 Suicide
 & Crisis Lifeline (988) or at [988lifeline.org][lifeline]._
 
-[rule-7]: https://student-rules.tamu.edu/rule07
-[rule-24]: https://student-rules.tamu.edu/rule24
-[rule-20]: https://aggiehonor.tamu.edu/Rules-and-Procedures/Rules/Honor-System-Rules
-[aggie-honor]: https://aggiehonor.tamu.edu
-[disability-services]: https://disability.tamu.edu
-[u-rule-8]: https://rules-saps.tamu.edu/PDFs/08.01.01.M1.pdf
 [health-services]: https://uhs.tamu.edu/appointments
 [telus]: https://uhs.tamu.edu/mental-health/student-support.html
-[title-ix]: https://titleix.tamu.edu
 [lifeline]: https://988lifeline.org
+
+### Statement on the Family Educational Rights and Privacy Act (FERPA)
+
+FERPA is a federal law designed to protect the privacy of educational records
+by limiting access to these records, to establish the right of students to
+inspect and review their educational records and to provide guidelines for the
+correction of inaccurate and misleading data through informal and formal
+hearings. Currently enrolled students wishing to withhold any or all directory
+information items may do so by going to [howdy.tamu.edu][howdy] and clicking on
+the "Directory Hold Information" link in the Student Records channel on the
+MyRecord tab. The complete [FERPA Notice to Students][ferpa-notice] and the
+student records policy is available on the Office of the Registrar webpage. 
+
+Items that can never be identified as public information are a student’s social
+security number, citizenship, gender, grades, GPR or class schedule. All
+efforts will be made in this class to protect your privacy and to ensure
+confidential treatment of information associated with or generated by your
+participation in the class.
+
+Directory items include name, UIN, local address, permanent address, email
+address, local telephone number, permanent telephone number, dates of
+attendance, program of study (college, major, campus), classification, previous
+institutions attended, degrees honors and awards received, participation in
+officially recognized activities and sports, medical residence location and
+medical residence specialization.
+
+[howdy]: https://howdy.tamu.edu/
+[ferpa-notice]: registrar.tamu.edu/Catalogs,-Policies-Procedures/FERPA/FERPA-Notice-to-Students#0-StatementofRights
 
