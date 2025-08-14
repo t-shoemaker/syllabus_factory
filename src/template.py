@@ -19,7 +19,7 @@ class MSRParser(HTMLParser):
     def __init__(self):
         """Initialize the parser."""
         super().__init__()
-        self.links = []
+        self.links = set()
 
     def handle_starttag(self, tag, attrs):
         """Store .docx links from hrefs in an HTML document.
@@ -37,7 +37,7 @@ class MSRParser(HTMLParser):
         for attr, val in attrs:
             if attr == "href" and val.endswith("docx"):
                 link = Path(val)
-                self.links.append(link)
+                self.links.add(link)
 
     def _prompt_user(self):
         """Prompt a user to download a .docx file.
@@ -97,15 +97,16 @@ class MSRParser(HTMLParser):
             If download fails or user cancels during selection
         """
         select = self._prompt_user()
-        to_download = urljoin(SENATE_PAGE, str(self.links[select]))
+        available = list(self.links)
+        request = urljoin(SENATE_PAGE, str(available[select]))
 
         try:
-            path, headers = urlretrieve(to_download)
-            filename = self.links[select].name if not filename else filename
+            path, headers = urlretrieve(request)
+            filename = available[select].name if not filename else filename
             shutil.move(path, filename)
-            print(f"Successfully downloaded: {self.links[select].name}")
+            print(f"Successfully downloaded: {available[select].name}")
         except Exception as e:
-            print(f"Download failed: {e}")
+            print(f"Download failed: {e}\nRequested: {request}")
             try:
                 Path(path).unlink(missing_ok=True)
             except (NameError, FileNotFoundError):
