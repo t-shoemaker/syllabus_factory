@@ -57,17 +57,17 @@ author = "Leitch et al"
 isbn = "978-0393602951"
 
 [[assignments]]
-name = "Exegesis 1"
+name = "Reading Response 1"
 points = 20
 due = "By 9/26"
 
 [[assignments]]
-name = "Exegesis 2"
+name = "Reading Response 2"
 points = 20
 due = "By 10/31"
 
 [[assignments]]
-name = "Exegesis 3"
+name = "Reading Response 3"
 points = 20
 due = "By 12/5"
 
@@ -80,5 +80,4 @@ due = "12/11"
 name = "Participation"
 points = 10
 due = "Ongoing"
-
 
