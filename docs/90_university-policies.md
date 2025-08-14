@@ -78,6 +78,30 @@ address and phone number of the office that serves your area, or call
 
 [ocrcas]: https://ocrcas.ed.gov/contact-ocr 
 
+### Civil Rights, Free Speech, and Title XI Policies
+
+Texas A&M University is committed to fostering a learning environment that is
+safe and productive for all. University policies and federal and state laws
+prohibit discrimination and harassment based on an individual's race, color,
+sex, (including pregnancy and related conditions), religion, national origin,
+age, disability, genetic information, veteran status, or any other legally
+protected characteristic. This includes forms of sex-based violence, such as
+sexual assault, sexual harassment, sexual exploitation, dating/domestic
+violence, and stalking.
+
+Students can report discrimination/harassment, access supportive resources, or
+learn more about their options for resolving complaints on the [University's
+Civil Rights & Title IX webpage][title-ix]. 
+
+Students should be aware that all university employees (except medical or
+mental health providers) are mandatory reporters, which means that if they
+observe, experience or become aware of an incident that they reasonably believe
+to be discrimination/harassment alleged to have been committed by or against a
+person who was a student or employee at the time of the incident, the employee
+must report the incident to the university.
+
+[title-ix]: https://titleix.tamu.edu/
+
 ### Americans with Disabilities Act (ADA) Policy
 
 Texas A&M University is committed to providing equitable access to learning
