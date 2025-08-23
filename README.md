@@ -35,14 +35,7 @@ are then rendered into a single Word document.
 Creating a Syllabus
 -------------------
 
-Before creating a syllabus, ensure you have local versions of the untracked
-directories
-
-```sh
-mkdir -p assets syllabi/docx syllabi/html syllabi/md
-```
-
-With these directories made, do the following:
+To create a syllabus, do the following:
 
 1. Make a new config file and save it to `configs` using the format
    `<YYYY>_<COURSE-CODE>_<COURSE-NAME>.toml`
