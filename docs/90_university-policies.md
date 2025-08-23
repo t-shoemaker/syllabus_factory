@@ -211,3 +211,26 @@ medical residence specialization.
 [howdy]: https://howdy.tamu.edu/
 [ferpa-notice]: registrar.tamu.edu/Catalogs,-Policies-Procedures/FERPA/FERPA-Notice-to-Students#0-StatementofRights
 
+### Academic Freedom and Classroom Discussion
+
+Academic freedom is a cornerstone of the University. Academic freedom in its
+teaching aspect is fundamental to the protection of the rights of the teacher
+in teaching and of the student to freedom in learning.
+
+1. Each faculty member is entitled to full freedom in the classroom discussing
+   the subject which the faculty member teaches.
+2. Texas A&M University will not penalize or discipline members of the faculty
+   because of their exercise of academic freedom.
+   \
+   Along with this freedom comes responsibility. It is the responsibility of
+   faculty members to ensure that topics discussed are related to the classroom
+   subject. Students should be free to take reasoned exception to the data or
+   views offered in any course of study and to reserve judgment about matters
+   of opinion, but they are responsible for learning the content of any course
+   of study for which they are enrolled.
+3. It is not the proper role of the university or any outside agency to attempt
+   to shield individuals from ideas and opinions they find unwelcome,
+   disagreeable, or even deeply offensive.
+4. Engaging with new ideas and perspectives helps students grow intellectually
+   and is beneficial to the educational process.
+\
