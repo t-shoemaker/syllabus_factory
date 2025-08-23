@@ -76,7 +76,7 @@ open:
 			*) echo "Unknown format recorded: $$format" >&2; exit 1 ;; \
 		esac; \
 		[ -f "$$f" ] || { echo "File does not exist: $$f" >&2; exit 1; }; \
-		$(OPEN_CMD) "$$f"; \
+		open "$$f"; \
 	else \
 		echo "No recorded format for $(CONFIG_NAME). Run: make <md|docx|html> CONFIG=..." >&2; \
 		exit 1; \
