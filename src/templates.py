@@ -1,27 +1,30 @@
-import re
 from enum import Enum
 from string import Template
 
-
-def dedent(string, indent=4):
-    """Dedent a triple-quoted string.
-
-    Parameters
-    ----------
-    string : str
-        The string
-    indent : int
-        How many spaces to dedent
-
-    Returns
-    -------
-    str
-        The dedented string
-    """
-    return re.sub(r"(?m)^ {4}", "", string)
+from utils import dedent
 
 
-class ScheduleEntry(Enum):
+class SyllabusItem(Enum):
+    """Base template class for Markdown entries."""
+
+    def render(self, **kwargs):
+        """Render an entry.
+
+        Parameters
+        ----------
+        kwargs : dict
+            Keywords for the template
+
+        Returns
+        -------
+        str
+            The rendered entry
+        """
+        template_str = dedent(self.value, indent=4)
+        return Template(template_str).safe_substitute(**kwargs)
+
+
+class ScheduleEntry(SyllabusItem):
     """Entries for the TOML schedule."""
 
     WEEK = """\
@@ -37,24 +40,8 @@ class ScheduleEntry(Enum):
       agenda = []
     """
 
-    def render(self, **kwargs):
-        """Render an entry.
 
-        Parameters
-        ----------
-        kwargs : dict
-            Keywords for the template
-
-        Returns
-        -------
-        str
-            The rendered entry
-        """
-        template_str = dedent(self.value)
-        return Template(template_str).safe_substitute(**kwargs)
-
-
-class MarkdownEntry(Enum):
+class MarkdownEntry(SyllabusItem):
     """Entries for the rendered markdown."""
 
     OBJECTIVE = "+ $description"
@@ -70,19 +57,3 @@ class MarkdownEntry(Enum):
     """
     AGENDA_ITEM = """+ $item\n"""
     NO_CLASS = """+ **No class**\n"""
-
-    def render(self, **kwargs):
-        """Render an entry.
-
-        Parameters
-        ----------
-        kwargs : dict
-            Keywords for the template
-
-        Returns
-        -------
-        str
-            The rendered entry
-        """
-        template_str = dedent(self.value)
-        return Template(template_str).safe_substitute(**kwargs)

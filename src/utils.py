@@ -1,4 +1,23 @@
+import re
 from textwrap import TextWrapper
+
+
+def dedent(text, indent=4):
+    """Dedent a triple-quoted string.
+
+    Parameters
+    ----------
+    text : str
+        The string
+    indent : int
+        How many spaces to dedent
+
+    Returns
+    -------
+    str
+        The dedented string
+    """
+    return re.sub(r"(?m)^ {4}", "", text)
 
 
 def wrap_paragraphs(text, width=79):
