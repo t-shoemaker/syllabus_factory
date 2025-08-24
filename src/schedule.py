@@ -32,7 +32,7 @@ class Scheduler:
 
         Raises
         ------
-        KeyError
+        ValueError
             If weekdays aren't MTWRF
         """
         invalid = [day for day in weekdays if day not in self.weekday_map]
@@ -94,14 +94,14 @@ class Scheduler:
             # do the same
             if not schedule or weekday == min(weekdays):
                 weeks += 1
-                week_rendered = ScheduleEntry.WEEK.render(num=weeks)
-                schedule.append(week_rendered)
+                week_md = ScheduleEntry.WEEK.render(num=weeks)
+                schedule.append(week_md)
 
             # Get the weekday name, determine whether it's a no-class day, and
             # format a line for the schedule
             day = calendar.day_name[weekday]
             no_class = "true" if date in exclude else "false"
-            day_rendered = ScheduleEntry.DAY.render(
+            day_md = ScheduleEntry.DAY.render(
                 num=weeks,
                 month=date.month,
                 day=date.day,
@@ -109,7 +109,7 @@ class Scheduler:
                 no_class=no_class,
             )
 
-            schedule.append(day_rendered)
+            schedule.append(day_md)
             date += timedelta(days=1)
 
         return "\n".join(schedule)

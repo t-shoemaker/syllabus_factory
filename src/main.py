@@ -28,18 +28,18 @@ def format_day(day):
     date = day.get("date", "")
 
     if no_class:
-        return MarkdownEntry["DAY"].render(
+        return MarkdownEntry.DAY.render(
             weekday=weekday,
             date=date,
-            agenda=MarkdownEntry["NO_CLASS"].render(),
+            agenda=MarkdownEntry.NO_CLASS.render(),
         )
 
     agenda_md = "".join(
-        MarkdownEntry["AGENDA_ITEM"].render(item=item)
+        MarkdownEntry.AGENDA_ITEM.render(item=item)
         for item in day.get("agenda", [])
     )
 
-    return MarkdownEntry["DAY"].render(
+    return MarkdownEntry.DAY.render(
         weekday=weekday,
         date=date,
         agenda=agenda_md,
@@ -66,7 +66,7 @@ def main(args):
 
     schedule_md = []
     for week in schedule.values():
-        md = MarkdownEntry["WEEK"].render(
+        md = MarkdownEntry.WEEK.render(
             num=week.get("num", ""),
             title=week.get("title", ""),
         )
