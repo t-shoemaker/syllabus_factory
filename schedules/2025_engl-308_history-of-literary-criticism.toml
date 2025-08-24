@@ -1,0 +1,366 @@
+[week-1]
+num = 1
+title = "Imitation"
+
+  [[week-1.days]]
+  date = "8/25"
+  weekday = "Monday"
+  no_class = false
+  agenda = ["Introductions"]
+
+  [[week-1.days]]
+  date = "8/27"
+  weekday = "Wednesday"
+  no_class = false
+  agenda = ["Plato. The Republic, bk. III, VII, X: 65-89"]
+
+  [[week-1.days]]
+  date = "8/29"
+  weekday = "Friday"
+  no_class = false
+  agenda = ["Plato, cont."]
+
+[week-2]
+num = 2
+title = "Poetics"
+
+  [[week-2.days]]
+  date = "9/1"
+  weekday = "Monday"
+  no_class = true
+  agenda = []
+
+  [[week-2.days]]
+  date = "9/3"
+  weekday = "Wednesday"
+  no_class = false
+  agenda = ["Horace. Ars Poetica: 133-144"]
+
+  [[week-2.days]]
+  date = "9/5"
+  weekday = "Friday"
+  no_class = false
+  agenda = ["Sir Philip Sidney. The Defence of Poesy: 262-291"]
+
+[week-3]
+num = 3
+title = "The Poet"
+
+  [[week-3.days]]
+  date = "9/8"
+  weekday = "Monday"
+  no_class = false
+  agenda = ["Percy Bysshe Shelley. A Defence of Poetry: 601-619"]
+
+  [[week-3.days]]
+  date = "9/10"
+  weekday = "Wednesday"
+  no_class = false
+  agenda = [
+    "W.E.B. Du Bois. Of Our Spiritual Strivings: 845-846",
+    "Virginia Woolf. Shakespeare’s Sister: 857-859"
+  ]
+
+  [[week-3.days]]
+  date = "9/12"
+  weekday = "Friday"
+  no_class = false
+  agenda = ["Du Bois and Woolf, cont."]
+
+[week-4]
+num = 4
+title = "The Critic"
+
+  [[week-4.days]]
+  date = "9/15"
+  weekday = "Monday"
+  no_class = false
+  agenda = ["John Crowe Ransom. Criticism, Inc.: 901-911"]
+
+  [[week-4.days]]
+  date = "9/17"
+  weekday = "Wednesday"
+  no_class = false
+  agenda = ["Cleanth Brooks. The Heresy of Paraphrase: 1183-1195"]
+
+  [[week-4.days]]
+  date = "9/19"
+  weekday = "Friday"
+  no_class = false
+  agenda = ["Random and Brooks, cont."]
+
+[week-5]
+num = 5
+title = "Structuralism"
+
+  [[week-5.days]]
+  date = "9/22"
+  weekday = "Monday"
+  no_class = false
+  agenda = ["Ferdinand de Saussure. Course in General Linguistics: 824-841"]
+
+  [[week-5.days]]
+  date = "9/24"
+  weekday = "Wednesday"
+  no_class = false
+  agenda = ["Saussure, cont."]
+
+  [[week-5.days]]
+  date = "9/26"
+  weekday = "Friday"
+  no_class = false
+  agenda = [
+    "Roman Jakobson. The Metaphoric and Metonymic Poles: 1074-1078",
+    "**Final call:** Reading Response 1"
+  ]
+
+[week-6]
+num = 6
+title = "Discourse"
+
+  [[week-6.days]]
+  date = "9/29"
+  weekday = "Monday"
+  no_class = false
+  agenda = [
+    "Roland Barthes. The Reality Effect and From Work to Text: 1272-1282"
+  ]
+
+  [[week-6.days]]
+  date = "10/1"
+  weekday = "Wednesday"
+  no_class = false
+  agenda = [
+    """Michel Foucault. What Is an Author? and The Incitement to Discourse: \
+    1394-1409; 1421-1432"""
+  ]
+
+  [[week-6.days]]
+  date = "10/3"
+  weekday = "Friday"
+  no_class = false
+  agenda = ["Foucault, cont."]
+
+[week-7]
+num = 7
+title = "Ideology"
+
+  [[week-7.days]]
+  date = "10/6"
+  weekday = "Monday"
+  no_class = false
+  agenda = [
+    """Karl Marx. Economic and Philosophic Manuscripts of 1844 and The \
+    Fetishism of Commodities and the Secret Thereof: 655-659; 667-675"""
+  ]
+
+  [[week-7.days]]
+  date = "10/8"
+  weekday = "Wednesday"
+  no_class = false
+  agenda = ["Marx, cont."]
+
+  [[week-7.days]]
+  date = "10/10"
+  weekday = "Friday"
+  no_class = false
+  agenda = [
+    """Raymond Williams. Base and Superstructure in Marxist Cultural Theory: \
+    1337-1350"""
+  ]
+
+[week-8]
+num = 8
+title = "The Aura"
+
+  [[week-8.days]]
+  date = "10/13"
+  weekday = "Monday"
+  no_class = true
+  agenda = []
+
+  [[week-8.days]]
+  date = "10/15"
+  weekday = "Wednesday"
+  no_class = false
+  agenda = [
+    """Walter Benjamin. The Work of Art in the Age of Its Technological \
+    Reproducibility: 976-996"""
+  ]
+
+  [[week-8.days]]
+  date = "10/17"
+  weekday = "Friday"
+  no_class = false
+  agenda = ["Bejamin, cont."]
+
+[week-9]
+num = 9
+title = "Structuring Myths"
+
+  [[week-9.days]]
+  date = "10/20"
+  weekday = "Monday"
+  no_class = false
+  agenda = ["Simone de Beauvoir. Myths: 1214-1221"]
+
+  [[week-9.days]]
+  date = "10/22"
+  weekday = "Wednesday"
+  no_class = false
+  agenda = ["Edward Said. Orientalism: 1783-1805"]
+
+  [[week-9.days]]
+  date = "10/24"
+  weekday = "Friday"
+  no_class = false
+  agenda = ["De Beauvoir and Said, cont."]
+
+[week-10]
+num = 10
+title = "The Unconscious"
+
+  [[week-10.days]]
+  date = "10/27"
+  weekday = "Monday"
+  no_class = false
+  agenda = ["Sigmund Freud. The Interpretation of Dreams, ch. V-VI: 789-799"]
+
+  [[week-10.days]]
+  date = "10/29"
+  weekday = "Wednesday"
+  no_class = false
+  agenda = ["Freud, cont."]
+
+  [[week-10.days]]
+  date = "10/31"
+  weekday = "Friday"
+  no_class = false
+  agenda = [
+    """Jacques Lacan. The Mirror Stage as Formative of the Function of the I \
+    as Revealed in Psychoanalytic Experience: 1111-1117""",
+    "**Final call:** Reading Response 2"
+  ]
+
+[week-11]
+num = 11
+title = "The Other"
+
+  [[week-11.days]]
+  date = "11/3"
+  weekday = "Monday"
+  no_class = false
+  agenda = ["Franz Fanon. The Fact of Blackness: 1353-1360"]
+
+  [[week-11.days]]
+  date = "11/5"
+  weekday = "Wednesday"
+  no_class = false
+  agenda = ["Laura Mulvey. Visual Pleasure and Narrative Cinema: 1954-1965"]
+
+  [[week-11.days]]
+  date = "11/7"
+  weekday = "Friday"
+  no_class = false
+  agenda = ["Fanon and Mulvey, cont."]
+
+[week-12]
+num = 12
+title = "Performativity"
+
+  [[week-12.days]]
+  date = "11/10"
+  weekday = "Monday"
+  no_class = false
+  agenda = ["J.L. Austin. Performative Utterances: 1236-1248"]
+
+  [[week-12.days]]
+  date = "11/12"
+  weekday = "Wednesday"
+  no_class = false
+  agenda = ["Judith Butler. Gender Trouble: 2375-2388"]
+
+  [[week-12.days]]
+  date = "11/14"
+  weekday = "Friday"
+  no_class = false
+  agenda = ["Butler, cont.", "**Due:** Votes for Week 15 readings"]
+
+[week-13]
+num = 13
+title = "Cultural Politics"
+
+  [[week-13.days]]
+  date = "11/17"
+  weekday = "Monday"
+  no_class = false
+  agenda = [
+    "Stuart Hall. Cultural Studies and Its Theoretical Legacies: 1705-1717"
+  ]
+
+  [[week-13.days]]
+  date = "11/19"
+  weekday = "Wednesday"
+  no_class = false
+  agenda = ["Homi K. Bhabha. The Commitment to Theory: 2152-2171"]
+
+  [[week-13.days]]
+  date = "11/21"
+  weekday = "Friday"
+  no_class = false
+  agenda = ["Hall and Bhabha, cont."]
+
+[week-14]
+num = 14
+title = "Taking Stock"
+
+  [[week-14.days]]
+  date = "11/24"
+  weekday = "Monday"
+  no_class = false
+  agenda = ["Preparing for the exam"]
+
+  [[week-14.days]]
+  date = "11/26"
+  weekday = "Wednesday"
+  no_class = true
+  agenda = []
+
+  [[week-14.days]]
+  date = "11/28"
+  weekday = "Friday"
+  no_class = true
+  agenda = []
+
+[week-15]
+num = 15
+title = "Class Selections"
+
+  [[week-15.days]]
+  date = "12/1"
+  weekday = "Monday"
+  no_class = false
+  agenda = ["TBD -- Class decides"]
+
+  [[week-15.days]]
+  date = "12/3"
+  weekday = "Wednesday"
+  no_class = false
+  agenda = ["TBD -- Class decides"]
+
+  [[week-15.days]]
+  date = "12/5"
+  weekday = "Friday"
+  no_class = false
+  agenda = ["TBD -- Class decides", "**Final call:** Reading Response 3"]
+
+[week-16]
+num = 16
+title = "Conclusion"
+
+  [[week-16.days]]
+  date = "12/8"
+  weekday = "Monday"
+  no_class = false
+  agenda = ["Wrap up"]
+

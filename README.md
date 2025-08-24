@@ -12,6 +12,7 @@ are then rendered into a single Word document.
 ├── config          Course syllabi TOML
 ├── docs            Markdown templates for each piece of a syllabus
 ├── filters         Lua filters for Pandoc
+├── schedules       Course schedule TOML
 ├── src             Python scripts for asset downloads and compiling markdown
 ├── syllabi         [Untracked] Makefile output
 │   ├── docx        Rendered syllabi
@@ -25,7 +26,7 @@ are then rendered into a single Word document.
 
 + [`make`][make] >= 3.8
 + [`pandoc`][pandoc] >= 3.0
-+ [`python`][python] >= 3.10
++ [`python`][python] >= 3.11
 
 [make]: https://www.gnu.org/software/make
 [pandoc]: https://pandoc.org
@@ -45,12 +46,15 @@ To create a syllabus, do the following:
    export CONFIG=path/to/<YYYY>_<COURSE-CODE>_<COURSE-NAME>.toml
    ```
 
-3. Compile the markdown
+3. Create the schedule TOML and fill it out
+   ```sh
+   make schedule
+   ````
+
+4. Compile the markdown
    ```sh
    make md
    ```
-
-4. Fill out the schedule in `syllabi/md/<YYYY>_<COURSE-CODE>_<COURSE-NAME>.md`
 
 5. Download a .docx reference file from the Minimum Syllabus Requirements page.
    It will automatically save to `assets/template.docx`

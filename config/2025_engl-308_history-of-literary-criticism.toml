@@ -10,19 +10,19 @@ title = "History of Literary Criticism"
 section = 500
 credits = 3
 description = """
-History of literary thought from antiquity to the present, including writings \
-such as Plato, Aristotle, 'Longinus,' Sidney, Shelley, and Dryden; analysis \
-of genres such as tragedy, lyric, and film; critical approaches such as new \
-criticism, structuralism, deconstruction, Marxism, feminism, new historicism, \
+History of literary thought from antiquity to the present, including writings
+such as Plato, Aristotle, 'Longinus,' Sidney, Shelley, and Dryden; analysis of
+genres such as tragedy, lyric, and film; critical approaches such as new
+criticism, structuralism, deconstruction, Marxism, feminism, new historicism,
 and film studies.
 
-Our overarching concern will be the problem of representation: What is the \
-nature of representation? How does it differ from the real? What is it for? \
-How do we assess what a representation represents? After posing these \
-questions in the context of classical and renaissance texts, we will make \
-multiple passes through the last 150 years of critical thought, tracing the \
-dynamics of representation across art, language, culture, politics, psychic \
-life, and subjectivity.\
+Our overarching concern will be the problem of representation: What is the
+nature of representation? How does it differ from the real? What is it for? How
+do we assess what a representation represents? After posing these questions in
+the context of classical and renaissance texts, we will make multiple passes
+through the last 150 years of critical thought, tracing the dynamics of
+representation across art, language, culture, politics, psychic life, and
+subjectivity.
 """
 prerequisites = "3 credits of literature at 200-level or above"
 designation = "None"
@@ -36,59 +36,59 @@ time = "8:00--8:50am"
 location = "LAAH 372"
 exclude = [ "09-01", "10-13", "10-14", "11-26", "11-27", "11-28" ]
 
-[[objectives]]
+[[objective]]
 description = """
-Identify and explain key themes and ideas in the history of literary criticism\
+Identify and explain key themes and ideas in the history of literary criticism
 """
 
-[[objectives]]
+[[objective]]
 description = """
-Gain broad familiarity with various critical movements and approaches\
+Gain broad familiarity with various critical movements and approaches
 """
 
-[[objectives]]
+[[objective]]
 description = """
 Understand how critics often develop their own interpretations and arguments in
-response to other critics\
+response to other critics
 """
 
-[[objectives]]
+[[objective]]
 description = """
 Hone the skills necessary to situate your interpretations alongside the
 thoughts, opinions, ideas, and interpretations of others\
 """
 
-[[objectives]]
+[[objective]]
 description = """
-Analyze critical arguments and use them to construct arguments of your own\
+Analyze critical arguments and use them to construct arguments of your own
 """
 
-[[books]]
+[[book]]
 title = "_The Norton Anthology of Theory and Criticism_, 3rd ed."
 author = "Leitch et al"
 isbn = "978-0393602951"
 
-[[assignments]]
+[[assignment]]
 name = "Reading Response 1"
 points = 20
 due = "By 9/26"
 
-[[assignments]]
+[[assignment]]
 name = "Reading Response 2"
 points = 20
 due = "By 10/31"
 
-[[assignments]]
+[[assignment]]
 name = "Reading Response 3"
 points = 20
 due = "By 12/5"
 
-[[assignments]]
+[[assignment]]
 name = "Final exam"
 points = 30
 due = "12/11"
 
-[[assignments]]
+[[assignment]]
 name = "Participation"
 points = 10
 due = "Ongoing"

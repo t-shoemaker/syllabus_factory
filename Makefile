@@ -2,6 +2,7 @@
 .DEFAULT_GOAL := help
 .DELETE_ON_ERROR:
 
+SCHEDULE_DIR := $(realpath schedules)
 FILTER_DIR   := $(realpath filters)
 SYLLABUS_DIR := $(realpath syllabi)
 INPUT_FILES  := $(wildcard docs/*.md)
@@ -9,6 +10,7 @@ DOCX_REF     := $(realpath assets/template.docx)
 
 ifdef CONFIG
     CONFIG_NAME := $(basename $(notdir $(CONFIG)))
+    SCHEDULE    := $(SCHEDULE_DIR)/$(CONFIG_NAME).toml
     MD_OUTPUT   := $(SYLLABUS_DIR)/md/$(CONFIG_NAME).md
     DOCX_OUTPUT := $(SYLLABUS_DIR)/docx/$(CONFIG_NAME).docx
     HTML_OUTPUT := $(SYLLABUS_DIR)/html/$(CONFIG_NAME).html
@@ -27,12 +29,16 @@ define check-docx-ref
 	@test -f "$(DOCX_REF)" || { echo "Missing reference docx: $(DOCX_REF). Run: make get-ref" >&2; exit 1; }
 endef
 
-$(SYLLABUS_DIR)/md $(SYLLABUS_DIR)/docx $(SYLLABUS_DIR)/html:
+$(SCHEDULE_DIR) $(SYLLABUS_DIR)/md $(SYLLABUS_DIR)/docx $(SYLLABUS_DIR)/html:
 	@mkdir -p $@
+
+$(SCHEDULE): $(CONFIG) | $(SCHEDULE_DIR)
+	@python3 src/schedule.py -c $(CONFIG) > $(SCHEDULE)
 
 $(MD_OUTPUT): $(CONFIG) $(INPUT_FILES) | $(SYLLABUS_DIR)/md
 	$(call check-input-files)
-	@python3 src/main.py -c $(CONFIG) -f $(INPUT_FILES) > $(MD_OUTPUT)
+	@python3 src/main.py -c $(CONFIG) -s $(SCHEDULE) -f $(INPUT_FILES) \
+		> $(MD_OUTPUT)
 
 $(DOCX_OUTPUT): $(MD_OUTPUT) | $(SYLLABUS_DIR)/docx
 	$(call check-docx-ref)
@@ -49,6 +55,9 @@ $(HTML_OUTPUT): $(MD_OUTPUT) | $(SYLLABUS_DIR)/html
 		--lua-filter=$(FILTER_DIR)/linebreaks.lua \
 		--lua-filter=$(FILTER_DIR)/tables.lua \
 		-o $(HTML_OUTPUT)
+
+schedule: $(SCHEDULE)
+	$(call require-config,$@)
 
 md: $(MD_OUTPUT)
 	$(call require-config,$@)
@@ -91,14 +100,15 @@ clean-all:
 	rm -rf $(SYLLABUS_DIR)/md/* $(SYLLABUS_DIR)/docx/* $(SYLLABUS_DIR)/html/* $(SYLLABUS_DIR)/.last-opened.*
 
 get-ref:
-	@python3 src/template.py -f $(DOCX_REF)
+	@python3 src/reference.py -f $(DOCX_REF)
 
 help:
 	@echo "Available targets:"
-	@echo "  md CONFIG=<name>     - Compile markdown"
-	@echo "  docx CONFIG=<name>   - Render to docx"
-	@echo "  html CONFIG=<name>   - Render to html"
-	@echo "  open CONFIG=<name>   - Open the last rendered file"
-	@echo "  clean CONFIG=<name>  - Clean a config's generated files"
-	@echo "  clean-all            - Clean all generated files"
-	@echo "  get-ref              - Download reference docx template"
+	@echo "  schedule CONFIG=<name>  - Make a schedule"
+	@echo "  md CONFIG=<name>        - Compile markdown"
+	@echo "  docx CONFIG=<name>      - Render to docx"
+	@echo "  html CONFIG=<name>      - Render to html"
+	@echo "  open CONFIG=<name>      - Open the last rendered file"
+	@echo "  clean CONFIG=<name>     - Clean a config's generated files"
+	@echo "  clean-all               - Clean all generated files"
+	@echo "  get-ref                 - Download reference docx template"

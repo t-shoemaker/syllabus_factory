@@ -1,4 +1,4 @@
 ### Course Schedule
 
-$course_schedule\
+$course_schedule
 

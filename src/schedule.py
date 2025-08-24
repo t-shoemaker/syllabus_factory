@@ -1,19 +1,47 @@
-import calendar
-from datetime import datetime, timedelta
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 
-from formatting import Formatter
+import argparse
+import calendar
+import tomllib
+from datetime import datetime, timedelta
+from pathlib import Path
+
+from templates import ScheduleEntry
 
 
 class Scheduler:
-    format = "%Y-%m-%d"
+    """Scheduler for compiling and rendering TOML schedules."""
+
+    date_format = "%Y-%m-%d"
     day_abbr = list(calendar.day_abbr)
     weekday_map = {"M": "Mon", "T": "Tue", "W": "Wed", "R": "Thu", "F": "Fri"}
 
-    def __init__(self):
-        """Initialize the Scheduler."""
-        self.formatter = Formatter()
+    def _convert_weekdays(self, *weekdays):
+        """Convert abbreviated weekdays to integer values.
 
-    def schedule(
+        Parameters
+        ----------
+        weekdays : str
+            Weekdays to convert
+
+        Returns
+        -------
+        set[int]
+            Integer values of weekdays
+
+        Raises
+        ------
+        KeyError
+            If weekdays aren't MTWRF
+        """
+        invalid = [day for day in weekdays if day not in self.weekday_map]
+        if invalid:
+            raise ValueError("Invalid weekdays; select from 'MWTRF'")
+
+        return {self.day_abbr.index(self.weekday_map[day]) for day in weekdays}
+
+    def make_schedule(
         self, year, start, end, weekdays="MTWRF", exclude=None, **kwargs
     ):
         """Create a schedule.
@@ -23,7 +51,7 @@ class Scheduler:
         year : str
             Year in YYYY format
         start : str
-            Start date in MM-DD format
+            State date in MM-DD format
         end : str
             End date in MM-DD format
         weekdays : str
@@ -31,31 +59,26 @@ class Scheduler:
         exclude : list[str]
             Days to exclude in MM-DD format
         kwargs : dict
-            Pass through keywords
+            Pass-through keywords
 
         Returns
         -------
         str
-            The schedule, which counts out weeks and enumerates meeting days
+            Schedule formatted as TOML
         """
-        # Convert abbreviated weekdays to integer values
-        weekdays = set(self.weekday_map[day] for day in list(weekdays))
-        weekdays = set(self.day_abbr.index(day) for day in weekdays)
+        weekdays = self._convert_weekdays(*weekdays)
 
-        # Define start and end dates, then build out the exclude list
-        start = datetime.strptime(f"{year}-{start}", self.format)
-        end = datetime.strptime(f"{year}-{end}", self.format)
+        start = datetime.strptime(f"{year}-{start}", self.date_format)
+        end = datetime.strptime(f"{year}-{end}", self.date_format)
 
         if exclude is None:
             exclude = []
         else:
             exclude = [
-                datetime.strptime(f"{year}-{date}", self.format)
+                datetime.strptime(f"{year}-{date}", self.date_format)
                 for date in exclude
             ]
 
-        # Initialize a week counter, open a buffer for the schedule, and roll
-        # through the days
         weeks = 0
         schedule = []
         date = start
@@ -67,25 +90,49 @@ class Scheduler:
                 continue
 
             # If the schedule is empty, count the week and add it to the
-            # schedule. If the day's weekday is the earliest in the weekdays,
+            # schedule. If the day's  weekday is the earliest in the weekdays,
             # do the same
             if not schedule or weekday == min(weekdays):
                 weeks += 1
-                week = self.formatter.format([{"num": weeks}], "weeks")
-                schedule.append(week)
+                week_rendered = ScheduleEntry.WEEK.render(num=weeks)
+                schedule.append(week_rendered)
 
-            # Get the weekday name and format a line for the schedule
+            # Get the weekday name, determine whether it's a no-class day, and
+            # format a line for the schedule
             day = calendar.day_name[weekday]
-            day = self.formatter.format(
-                [{"weekday": day, "month": date.month, "day": date.day}],
-                template="days",
+            no_class = "true" if date in exclude else "false"
+            day_rendered = ScheduleEntry.DAY.render(
+                num=weeks,
+                month=date.month,
+                day=date.day,
+                weekday=day,
+                no_class=no_class,
             )
 
-            # Is the day an excluded one? If so, mark it
-            if date in exclude:
-                day += "\n\n+ **No class**"
-
-            schedule.append(day)
+            schedule.append(day_rendered)
             date += timedelta(days=1)
 
-        return "\n\n".join(schedule)
+        return "\n".join(schedule)
+
+
+def main(args):
+    """Run the script."""
+    with args.config.open("rb") as f:
+        syllabus = tomllib.load(f)
+
+    scheduler = Scheduler()
+    schedule = scheduler.make_schedule(**syllabus["schedule"])
+    print(schedule)
+
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description="Build a course schedule")
+    parser.add_argument(
+        "-c",
+        "--config",
+        type=Path,
+        required=True,
+        help="Syllabus config (.toml)",
+    )
+    args = parser.parse_args()
+    main(args)
