@@ -1,0 +1,279 @@
+[week-1]
+num = 1
+title = "Imitation"
+
+  [[week-1.days]]
+  date = "1/13"
+  weekday = "Tuesday"
+  no_class = false
+  agenda = ["Introductions"]
+
+  [[week-1.days]]
+  date = "1/15"
+  weekday = "Thursday"
+  no_class = false
+  agenda = ["Plato. The Republic: 58-89"]
+
+[week-2]
+num = 2
+title = "Poetics"
+
+  [[week-2.days]]
+  date = "1/20"
+  weekday = "Tuesday"
+  no_class = false
+  agenda = ["Plato, cont."]
+
+  [[week-2.days]]
+  date = "1/22"
+  weekday = "Thursday"
+  no_class = false
+  agenda = ["Horace. Ars Poetica: 133-144"]
+
+[week-3]
+num = 3
+title = "The Poet"
+
+  [[week-3.days]]
+  date = "1/27"
+  weekday = "Tuesday"
+  no_class = false
+  agenda = ["Percy Bysshe Shelley. A Defence of Poetry: 601-619"]
+
+  [[week-3.days]]
+  date = "1/29"
+  weekday = "Thursday"
+  no_class = false
+  agenda = [
+    "W.E.B. Du Bois. Of Our Spiritual Strivings: 845-846",
+    "Virginia Woolf. Shakespeare’s Sister: 857-859"
+  ]
+
+[week-4]
+num = 4
+title = "The Critic"
+
+  [[week-4.days]]
+  date = "2/3"
+  weekday = "Tuesday"
+  no_class = false
+  agenda = ["John Crowe Ransom. Criticism, Inc.: 901-911"]
+
+  [[week-4.days]]
+  date = "2/5"
+  weekday = "Thursday"
+  no_class = false
+  agenda = ["Cleanth Brooks. The Heresy of Paraphrase: 1183-1195"]
+
+[week-5]
+num = 5
+title = "Semiotics"
+
+  [[week-5.days]]
+  date = "2/10"
+  weekday = "Tuesday"
+  no_class = false
+  agenda = ["Ferdinand de Saussure. Course in General Linguistics: 824-841"]
+
+  [[week-5.days]]
+  date = "2/12"
+  weekday = "Thursday"
+  no_class = false
+  agenda = [
+    "Saussure, cont.",
+    "**Final call:** Reading Response 1"
+  ]
+
+[week-6]
+num = 6
+title = "Discourse"
+
+  [[week-6.days]]
+  date = "2/17"
+  weekday = "Tuesday"
+  no_class = false
+  agenda = [
+    "Roland Barthes. Mythologies and The Reality Effect: 1266-1267, 1272-1277"
+  ]
+
+  [[week-6.days]]
+  date = "2/19"
+  weekday = "Thursday"
+  no_class = false
+  agenda = [
+    """Michel Foucault. What Is an Author?: 1394-1409"""
+  ]
+
+[week-7]
+num = 7
+title = "Ideology"
+
+  [[week-7.days]]
+  date = "2/24"
+  weekday = "Tuesday"
+  no_class = false
+  agenda = [
+    """Karl Marx. Economic and Philosophic Manuscripts of 1844 and The /
+    Fetishism of Commodities and the Secret Thereof: 655-659; 667-675"""
+  ]
+
+  [[week-7.days]]
+  date = "2/26"
+  weekday = "Thursday"
+  no_class = false
+  agenda = [
+    "Max Horkheimer and Theodor Adorno. Dialectic of Enlightenment: 1033-1050"
+  ]
+
+[week-8]
+num = 8
+title = "Structing Myths"
+
+  [[week-8.days]]
+  date = "3/3"
+  weekday = "Tuesday"
+  no_class = false
+  agenda = ["Simone de Beauvoir. Myths: 1214-1221"]
+
+  [[week-8.days]]
+  date = "3/5"
+  weekday = "Thursday"
+  no_class = false
+  agenda = ["Edward Said. Orientalism: 1783-1805"]
+
+[week-9]
+num = 9
+title = "Spring Break"
+
+  [[week-9.days]]
+  date = "3/10"
+  weekday = "Tuesday"
+  no_class = true
+  agenda = []
+
+  [[week-9.days]]
+  date = "3/12"
+  weekday = "Thursday"
+  no_class = true
+  agenda = []
+
+[week-10]
+num = 10
+title = "The Unconscious"
+
+  [[week-10.days]]
+  date = "3/17"
+  weekday = "Tuesday"
+  no_class = false
+  agenda = ["Sigmund Freud. The Interpretation of Dreams: 789-799"]
+
+  [[week-10.days]]
+  date = "3/19"
+  weekday = "Thursday"
+  no_class = false
+  agenda = [
+    """Jacques Lacan. The Mirror Stage as Formative of the Function of the I \
+    as Revealed in Psychoanalytic Experience: 1111-1117"""
+  ]
+
+[week-11]
+num = 11
+title = "The Other"
+
+  [[week-11.days]]
+  date = "3/24"
+  weekday = "Tuesday"
+  no_class = false
+  agenda = ["Laura Mulvey. Visual Pleasure and Narrative Cinema: 1954-1965"]
+
+  [[week-11.days]]
+  date = "3/26"
+  weekday = "Thursday"
+  no_class = false
+  agenda = [
+    "Toni Morrison. Unspeakable Things Unspoken: 1673-1684",
+     "**Final call:** Reading Response 2"
+  ]
+
+[week-12]
+num = 12
+title = "Performativity"
+
+  [[week-12.days]]
+  date = "3/31"
+  weekday = "Tuesday"
+  no_class = false
+  agenda = ["J.L. Austin. Performative Utterances: 1236-1248"]
+
+  [[week-12.days]]
+  date = "4/2"
+  weekday = "Thursday"
+  no_class = false
+  agenda = ["Judith Butler. Gender Trouble: 2375-2388"]
+
+[week-13]
+num = 13
+title = "Cultural Politics"
+
+  [[week-13.days]]
+  date = "4/7"
+  weekday = "Tuesday"
+  no_class = false
+  agenda = [
+    """Raymond Williams. Base and Superstructure in Marxist Cultural Theory: \
+    1337-1350"""
+  ]
+
+  [[week-13.days]]
+  date = "4/9"
+  weekday = "Thursday"
+  no_class = false
+  agenda = [
+    "Stuart Hall. Cultural Studies and Its Theoretical Legacies: 1705-1717"
+  ]
+
+[week-14]
+num = 14
+title = "Taking Stock"
+
+  [[week-14.days]]
+  date = "4/14"
+  weekday = "Tuesday"
+  no_class = false
+  agenda = ["Susan Sontag. Against Interpretation: 1722-1730"]
+
+  [[week-14.days]]
+  date = "4/16"
+  weekday = "Thursday"
+  no_class = false
+  agenda = ["Preparing for the exam"]
+
+[week-15]
+num = 15
+title = "Class Selections"
+
+  [[week-15.days]]
+  date = "4/21"
+  weekday = "Tuesday"
+  no_class = false
+  agenda = ["TBD -- Class decides"]
+
+  [[week-15.days]]
+  date = "4/23"
+  weekday = "Thursday"
+  no_class = false
+  agenda = [
+    "TBD -- Class decides",
+    "**Final Call:** Reading Response 3"
+  ]
+
+[week-16]
+num = 16
+title = "Conclusion"
+
+  [[week-16.days]]
+  date = "4/28"
+  weekday = "Tuesday"
+  no_class = false
+  agenda = ["Wrap up"]
+

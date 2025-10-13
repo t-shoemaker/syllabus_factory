@@ -1,0 +1,90 @@
+[instructor]
+name = "Tyler Shoemaker"
+email = "tshoemaker@tamu.edu"
+office = "LAAH 480"
+hours = "MW 3:00--4:00pm"
+
+[course]
+number = "ENGL 308"
+title = "History of Literary Criticism"
+section = 500
+credits = 3
+description = """
+History of critical thought about art and culture from antiquity to the
+present; topics and readings span a variety of eras, approaches, and artistic
+genres. Key themes and ideas in criticism may be presented in the context of
+historical figures (Plato, Sidney, Behn, Shelley, etc.) or entire critical
+movements such as new criticism, structuralism and poststructuralism,
+psychoanalysis, Marxism, feminism and queer theory, postcolonialism, race and
+ethnic studies, and cultural studies, among others. 
+
+Our overarching concern will be the problem of representation: What is the
+nature of representation? How does it differ from the real? What is it for? How
+do we assess what a representation represents? After posing these questions in
+the context of classical and renaissance texts, we will make multiple passes
+through the last 150 years of critical thought, tracing the dynamics of
+representation across art, language, culture, politics, psychic life, and
+subjectivity.
+"""
+prerequisites = "3 credits of literature at 200-level or above"
+designation = "None"
+
+[schedule]
+year = "2026"
+start = "01-12"
+end = "04-28"
+weekdays = "TR" 
+time = "9:35--10:50am"
+location = "LAAH 372"
+exclude = [ "01-19", "03-09", "03-10", "03-11", "03-12", "03-13", "04-03" ]
+
+[[objective]]
+description = """Identify and explain key themes and ideas in the history of
+literary criticism"""
+
+[[objective]]
+description = """Gain broad familiarity with various critical movements and
+approaches"""
+
+[[objective]]
+description = """Understand how critics often develop their own interpretations
+and arguments in response to other critics"""
+
+[[objective]]
+description = """Hone the skills necessary to situate your interpretations
+alongside the thoughts, opinions, ideas, and interpretations of others"""
+
+[[objective]]
+description = """Analyze critical arguments and use them to construct arguments
+of your own"""
+
+[[book]]
+title = "_The Norton Anthology of Theory and Criticism_, 3rd ed."
+author = "Leitch et al"
+isbn = "978-0393602951"
+
+[[assignment]]
+name = "Reading Response 1"
+points = 20
+due = "By 2/12"
+
+[[assignment]]
+name = "Reading Response 2"
+points = 20
+due = "By 3/26"
+
+[[assignment]]
+name = "Reading Response 3"
+points = 20
+due = "By 4/23"
+
+[[assignment]]
+name = "Final exam"
+points = 30
+due = "4/30"
+
+[[assignment]]
+name = "Participation"
+points = 10
+due = "Ongoing"
+
