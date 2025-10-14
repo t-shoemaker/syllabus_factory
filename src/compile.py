@@ -40,8 +40,8 @@ def format_day(day):
     )
 
 
-def render_md(syllabus_data, schedule, md_files):
-    """Render Markdown and send to stdout.
+def compile_md(syllabus_data, schedule, md_files):
+    """Compile Markdown and send to stdout.
 
     Parameters
     ----------

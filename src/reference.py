@@ -1,7 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-
-import argparse
 import shutil
 import sys
 from html.parser import HTMLParser
@@ -119,23 +115,18 @@ class MSRParser(HTMLParser):
                 pass
 
 
-def main(args):
-    """Run the script."""
+def get_reference_docx(filename):
+    """Download reference .docx file.
+
+    Parameters
+    ----------
+    filename : Path
+        Name of the output file
+    """
     path, headers = urlretrieve(MSR_PAGE)
     with open(path, "r") as fin:
         html = fin.read()
 
     parser = MSRParser()
     parser.feed(html)
-    parser.download(args.filename)
-
-
-if __name__ == "__main__":
-    parser = argparse.ArgumentParser(
-        description="Download a .docx reference file"
-    )
-    parser.add_argument(
-        "-f", "--filename", type=Path, default=None, help="Name of the file"
-    )
-    args = parser.parse_args()
-    main(args)
+    parser.download(filename)

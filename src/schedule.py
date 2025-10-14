@@ -1,11 +1,5 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-
-import argparse
 import calendar
-import tomllib
 from datetime import datetime, timedelta
-from pathlib import Path
 
 from templates import ScheduleEntry
 
@@ -115,24 +109,14 @@ class Scheduler:
         return "\n".join(schedule)
 
 
-def main(args):
-    """Run the script."""
-    with args.config.open("rb") as f:
-        syllabus = tomllib.load(f)
+def build_schedule(syllabus_data):
+    """Build schedule from syllabus config.
 
+    Parameters
+    ----------
+    syllabus_data dict
+        Course metadata
+    """
     scheduler = Scheduler()
-    schedule = scheduler.make_schedule(**syllabus["schedule"])
+    schedule = scheduler.make_schedule(**syllabus_data["schedule"])
     print(schedule)
-
-
-if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Build a course schedule")
-    parser.add_argument(
-        "-c",
-        "--config",
-        type=Path,
-        required=True,
-        help="Syllabus config (.toml)",
-    )
-    args = parser.parse_args()
-    main(args)

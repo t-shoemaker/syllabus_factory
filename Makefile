@@ -33,11 +33,11 @@ $(SCHEDULE_DIR) $(SYLLABUS_DIR)/md $(SYLLABUS_DIR)/docx $(SYLLABUS_DIR)/html:
 	@mkdir -p $@
 
 $(SCHEDULE): $(CONFIG) | $(SCHEDULE_DIR)
-	@python3 src/schedule.py -c $(CONFIG) > $(SCHEDULE)
+	@python3 src schedule -c $(CONFIG) > $(SCHEDULE)
 
 $(MD_OUTPUT): $(CONFIG) $(INPUT_FILES) | $(SYLLABUS_DIR)/md
 	$(call check-input-files)
-	@python3 src -c $(CONFIG) -s $(SCHEDULE) -f $(INPUT_FILES) \
+	@python3 src compile -c $(CONFIG) -s $(SCHEDULE) -f $(INPUT_FILES) \
 		> $(MD_OUTPUT)
 
 $(DOCX_OUTPUT): $(MD_OUTPUT) | $(SYLLABUS_DIR)/docx
@@ -100,7 +100,7 @@ clean-all:
 	rm -rf $(SYLLABUS_DIR)/md/* $(SYLLABUS_DIR)/docx/* $(SYLLABUS_DIR)/html/* $(SYLLABUS_DIR)/.last-opened.*
 
 get-ref:
-	@python3 src/reference.py -f $(DOCX_REF)
+	@python3 src reference -f $(DOCX_REF)
 
 help:
 	@echo "Available targets:"
