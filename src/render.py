@@ -1,9 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-
-import argparse
-import tomllib
-from pathlib import Path
 from string import Template
 
 from templates import MarkdownEntry
@@ -46,24 +40,28 @@ def format_day(day):
     )
 
 
-def main(args):
-    """Run the script."""
-    with args.config.open("rb") as f:
-        syllabus = tomllib.load(f)
+def render_md(syllabus_data, schedule, md_files):
+    """Render Markdown and send to stdout.
 
+    Parameters
+    ----------
+    syllabus_data : dict
+        Course metadata
+    schedule : dict
+        Schedule of meetings
+    md_files : list[Path]
+        Markdown template files for each syllabus component
+    """
     # Format top-level information
     for item in ("assignment", "book", "objective"):
         entries = []
-        for entry in syllabus[item]:
+        for entry in syllabus_data[item]:
             md = MarkdownEntry[item.upper()].render(**entry)
             entries.append(wrap_paragraphs(md))
 
-        syllabus[item + "s"] = "\n".join(entries)
+        syllabus_data[item + "s"] = "\n".join(entries)
 
     # Format the schedule
-    with args.schedule.open("rb") as f:
-        schedule = tomllib.load(f)
-
     schedule_md = []
     for week in schedule.values():
         md = MarkdownEntry.WEEK.render(
@@ -75,45 +73,17 @@ def main(args):
             md = format_day(day)
             schedule_md.append(md)
 
-    syllabus["course_schedule"] = "\n".join(schedule_md)
+    syllabus_data["course_schedule"] = "\n".join(schedule_md)
 
     # Flatten the schedule config and wrap the course description
-    syllabus = flatten_config(syllabus)
-    if "course_description" in syllabus:
-        syllabus["course_description"] = wrap_paragraphs(
-            syllabus["course_description"], width=79
+    syllabus_data = flatten_config(syllabus_data)
+    if "course_description" in syllabus_data:
+        syllabus_data["course_description"] = wrap_paragraphs(
+            syllabus_data["course_description"], width=79
         )
 
     # Open the markdown files, then unpack syllabus values in the mapping and
     # stream out the results
-    docs = [file.read_text().strip() for file in args.files]
-    content = Template("\n\n".join(docs)).safe_substitute(**syllabus)
+    docs = [file.read_text().strip() for file in md_files]
+    content = Template("\n\n".join(docs)).safe_substitute(**syllabus_data)
     print(content)
-
-
-if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Render course Markdown")
-    parser.add_argument(
-        "-c",
-        "--config",
-        type=Path,
-        required=True,
-        help="Syllabus config (.toml)",
-    )
-    parser.add_argument(
-        "-s",
-        "--schedule",
-        type=Path,
-        required=True,
-        help="Course schedule (.toml)",
-    )
-    parser.add_argument(
-        "-f",
-        "--files",
-        type=Path,
-        nargs="+",
-        required=True,
-        help="Templates (.md)",
-    )
-    args = parser.parse_args()
-    main(args)

@@ -37,7 +37,7 @@ $(SCHEDULE): $(CONFIG) | $(SCHEDULE_DIR)
 
 $(MD_OUTPUT): $(CONFIG) $(INPUT_FILES) | $(SYLLABUS_DIR)/md
 	$(call check-input-files)
-	@python3 src/main.py -c $(CONFIG) -s $(SCHEDULE) -f $(INPUT_FILES) \
+	@python3 src -c $(CONFIG) -s $(SCHEDULE) -f $(INPUT_FILES) \
 		> $(MD_OUTPUT)
 
 $(DOCX_OUTPUT): $(MD_OUTPUT) | $(SYLLABUS_DIR)/docx
