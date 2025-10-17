@@ -38,24 +38,24 @@ location = "LAAH 372"
 exclude = [ "01-19", "03-09", "03-10", "03-11", "03-12", "03-13", "04-03" ]
 
 [[objective]]
-description = """Identify and explain key themes and ideas in the history of
+description = """Identify and describe key themes and ideas in the history of
 literary criticism"""
 
 [[objective]]
-description = """Gain broad familiarity with various critical movements and
+description = """Trace the development of various critical movements and
 approaches"""
 
 [[objective]]
-description = """Understand how critics often develop their own interpretations
-and arguments in response to other critics"""
+description = """Explain how critics develop their own interpretations and
+arguments in response to other critics"""
 
 [[objective]]
-description = """Hone the skills necessary to situate your interpretations
+description = """Hone the skills necessary to situate one's interpretations
 alongside the thoughts, opinions, ideas, and interpretations of others"""
 
 [[objective]]
 description = """Analyze critical arguments and use them to construct arguments
-of your own"""
+of one's own"""
 
 [[book]]
 title = "_The Norton Anthology of Theory and Criticism_, 3rd ed."

@@ -127,7 +127,7 @@ title = "Ideology"
 
 [week-8]
 num = 8
-title = "Structing Myths"
+title = "Structuring Myths"
 
   [[week-8.days]]
   date = "3/3"
@@ -256,14 +256,14 @@ title = "Class Selections"
   date = "4/21"
   weekday = "Tuesday"
   no_class = false
-  agenda = ["TBD -- Class decides"]
+  agenda = ["TBD -- Class decides readings"]
 
   [[week-15.days]]
   date = "4/23"
   weekday = "Thursday"
   no_class = false
   agenda = [
-    "TBD -- Class decides",
+    "TBD -- Class decides readings",
     "**Final Call:** Reading Response 3"
   ]
 
