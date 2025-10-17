@@ -16,6 +16,10 @@ Students will be excused from attending class on the day of a graded activity
 or when attendance contributes to a student's grade, for the reasons stated in
 Student Rule 7, or other reason deemed appropriate by the instructor. 
 
+Work submitted by a student as makeup work for an excused absence is not
+considered late work and is exempted from the late work policy ([Student Rule
+7][rule-7]). 
+
 Please refer to [Student Rule 7][rule-7] in its entirety for information about
 makeup work, including definitions, and related documentation and timelines.
 

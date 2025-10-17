@@ -1,6 +1,6 @@
 ### Course Learning Outcomes
 
-By the end of this course, you will:
+At the end of the course, students will be able to:
 
 $objectives\
 
