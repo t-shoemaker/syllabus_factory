@@ -17,7 +17,7 @@ def dedent(text, indent=4):
     str
         The dedented string
     """
-    return re.sub(fr"(?m)^ {indent}", "", text)
+    return re.sub(rf"(?m)^{' ' * indent}", "", text)
 
 
 def wrap_paragraphs(text, width=79):
