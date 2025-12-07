@@ -1,6 +1,6 @@
 from string import Template
 
-from templates import MarkdownEntry
+from templates import MarkdownEntry, SpecialCourseDesignation
 from utils import wrap_paragraphs, flatten_config
 
 
@@ -81,6 +81,17 @@ def compile_md(syllabus_data, schedule, md_files):
         syllabus_data["course_description"] = wrap_paragraphs(
             syllabus_data["course_description"], width=79
         )
+
+    # Format course designation
+    designation = syllabus_data.get("course_designation", "None")
+    if designation != "None":
+        match designation:
+            case "KLPC":
+                syllabus_data["course_designation"] = (
+                    SpecialCourseDesignation.KLPC.render()
+                )
+            case _:
+                raise ValueError(f"No designation for {designation}")
 
     # Open the markdown files, then unpack syllabus values in the mapping and
     # stream out the results
