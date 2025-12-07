@@ -7,7 +7,7 @@ from utils import flatten_config, wrap_paragraphs
 class SyllabusValidator:
     """Validates syllabus data before compilation."""
 
-    REQUIRED = ["instructor", "course"]
+    REQUIRED = ["instructor", "course", "schedule"]
 
     def validate(self, syllabus_data):
         """Validate required fields and data types.
