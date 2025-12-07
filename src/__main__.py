@@ -11,6 +11,26 @@ from reference import get_reference_docx
 from schedule import build_schedule
 
 
+def load_toml(path):
+    """Load TOML file.
+
+    Parameters
+    ----------
+    path : Path or str
+        Path to the file
+
+    Returns
+    -------
+    dict
+        TOML data
+    """
+    path = Path(path)
+    with path.open("rb") as f:
+        data = tomllib.load(f)
+
+    return data
+
+
 def main(argv=None):
     """Run the script."""
     parser = argparse.ArgumentParser(
@@ -85,19 +105,16 @@ def main(argv=None):
 
     if args.command == "reference":
         get_reference_docx(args.filename)
+        return
 
-    else:
-        with args.config.open("rb") as f:
-            syllabus_data = tomllib.load(f)
+    syllabus_data = load_toml(args.config)
 
-        if args.command == "schedule":
-            build_schedule(syllabus_data)
+    if args.command == "schedule":
+        build_schedule(syllabus_data)
 
-        elif args.command == "compile":
-            with args.schedule.open("rb") as f:
-                schedule = tomllib.load(f)
-
-            compile_md(syllabus_data, schedule, args.files)
+    elif args.command == "compile":
+        schedule = load_toml(args.schedule)
+        compile_md(syllabus_data, schedule, args.files)
 
 
 if __name__ == "__main__":
