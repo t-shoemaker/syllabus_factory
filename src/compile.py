@@ -1,184 +1,455 @@
+from dataclasses import dataclass, asdict
+from pathlib import Path
 from string import Template
 
 from templates import MarkdownEntry, SpecialCourseDesignation
-from utils import wrap_paragraphs, flatten_config
+from utils import flatten_config, wrap_paragraphs
 
 
-def format_toml_tables(syllabus_data, items=None):
-    """Format tables of arrays.
+@dataclass
+class TemplateConfig:
+    """Context for template rendering."""
 
-    Parameters
-    ----------
-    syllabus_data : dict
-        Course metadata
-    items : iterable or None
-        Keys to access tables
+    syllabus_data: dict
+    schedule: dict
 
-    Returns
-    -------
-    dict
-        Course metadata with formatted tables
-    """
-    if items is None:
-        return syllabus_data
+    def to_flat_dict(self):
+        """Convert to flat dictionary for template substitution.
 
-    for item in items:
+        Returns
+        -------
+        dict
+            Flattened dictionary
+        """
+        return flatten_config({**self.syllabus_data})
+
+
+class SyllabusValidator:
+    """Validates syllabus data before compilation."""
+
+    REQUIRED = ["instructor", "course"]
+
+    def validate(self, syllabus_data):
+        """Validate required fields and data types.
+
+        Parameters
+        ----------
+        syllabus_data : dict
+            Course metadata
+
+        Raises
+        ------
+        ValueError
+            If required fields are missing or invalid
+        """
+        missing = [f for f in self.REQUIRED if f not in syllabus_data]
+        if missing:
+            raise ValueError(f"Missing required fields: {', '.join(missing)}")
+
+
+class FormatterRegistry:
+    """Registry of data formatters for different content types."""
+
+    def __init__(self):
+        """Initialize the object."""
+        self._formatters = {}
+
+    def register(self, key, func):
+        """Register a formatter for a data key.
+
+        Parameters
+        ----------
+        key : str
+            The data key to format
+        func : callable
+            Function that formats the data
+        """
+        self._formatters[key] = func
+
+    def format(self, key, data):
+        """Apply registered formatter to data.
+
+        Parameters
+        ----------
+        key : str
+            The data key
+        data : any
+            The data to format
+
+        Returns
+        -------
+        any
+            Formatted data, or original if no formatter registered
+        """
+        if key in self._formatters:
+            return self._formatters[key](data)
+
+        return data
+
+    def has_formatter(self, key):
+        """Check if a formatter is registered for a key.
+
+        Parameters
+        ----------
+        key : str
+            The data key for a formatter
+
+        Returns
+        -------
+        bool
+            If True, the formatter is registered
+        """
+        return key in self._formatters
+
+
+class TableFormatter:
+    """Formats TOML table arrays into markdown."""
+
+    @staticmethod
+    def format_items(items, item_type):
+        """Format a list of items into markdown.
+
+        Parameters
+        ----------
+        items : list[dict]
+            List of items to format
+        item_type : str
+            Type of item (objective, book, assignment)
+
+        Returns
+        -------
+        str
+            Formatted markdown entries
+        """
         entries = []
-        for entry in syllabus_data[item]:
-            entry_md = MarkdownEntry[item.upper()].render(**entry)
+        for entry in items:
+            entry_md = MarkdownEntry[item_type.upper()].render(**entry)
             entries.append(wrap_paragraphs(entry_md))
 
-        syllabus_data[item + "s"] = "\n".join(entries)
-
-    return syllabus_data
+        return "\n".join(entries)
 
 
-def format_schedule(schedule):
-    """Format the schedule.
+class ScheduleFormatter:
+    """Formats schedule data into markdown."""
 
-    Parameters
-    ----------
-    schedule : dict
-        The schedule weeks
+    def __init__(self, schedule_data):
+        """Initialize the object.
 
-    Returns
-    -------
-    str
-        Formatted schedule
-    """
-    schedule_md = []
-    for week in schedule.values():
+        Parameters
+        ----------
+        schedule_data : dict
+            Schedule data
+        """
+        self.schedule = schedule_data
+
+    def format(self):
+        """Format complete schedule.
+
+        Returns
+        -------
+        str
+            Formatted schedule markdown
+        """
+        return "\n".join(
+            self._format_week(week) for week in self.schedule.values()
+        )
+
+    def _format_week(self, week):
+        """Format a single week.
+
+        Parameters
+        ----------
+        week : dict
+            Week data
+
+        Returns
+        -------
+        str
+            Formatted week markdown
+        """
         num = week.get("num", "")
         title = week.get("title", "")
 
         week_md = MarkdownEntry.WEEK.render(num=num, title=title)
-        schedule_md.append(week_md)
+        days = "\n".join(self._format_day(day) for day in week.get("days", []))
 
-        for day in week.get("days", []):
-            day_md = format_day(day)
-            schedule_md.append(day_md)
+        return f"{week_md}\n{days}"
 
-    return "\n".join(schedule_md)
+    def _format_day(self, day):
+        """Format a single day.
 
+        Parameters
+        ----------
+        day : dict
+            Day information
 
-def format_day(day):
-    """Format a day.
+        Returns
+        -------
+        str
+            Rendered day markdown
+        """
+        no_class = day.get("no_class", False)
+        weekday = day.get("weekday", "")
+        date = day.get("date", "")
 
-    Parameters
-    ----------
-    day : dict
-        Day information
+        if no_class:
+            return MarkdownEntry.DAY.render(
+                weekday=weekday,
+                date=date,
+                agenda=MarkdownEntry.NO_CLASS.render(),
+            )
 
-    Returns
-    -------
-    str
-        Rendered day
-    """
-    no_class = day.get("no_class", False)
-    weekday = day.get("weekday", "")
-    date = day.get("date", "")
+        agenda_md = "".join(
+            MarkdownEntry.AGENDA_ITEM.render(item=item)
+            for item in day.get("agenda", [])
+        )
 
-    if no_class:
         return MarkdownEntry.DAY.render(
-            weekday=weekday,
-            date=date,
-            agenda=MarkdownEntry.NO_CLASS.render(),
+            weekday=weekday, date=date, agenda=agenda_md
         )
 
-    agenda_md = "".join(
-        MarkdownEntry.AGENDA_ITEM.render(item=item)
-        for item in day.get("agenda", [])
-    )
 
-    return MarkdownEntry.DAY.render(
-        weekday=weekday,
-        date=date,
-        agenda=agenda_md,
-    )
+class DescriptionFormatter:
+    """Formats text descriptions with word wrapping."""
 
+    def __init__(self, width=79):
+        """Initialize the object.
 
-def format_descriptions(syllabus_data, descriptors=None):
-    """Format catalog and course descriptions.
+        Parameters
+        ----------
+        width : int
+            Width for word wrapping
+        """
+        self.width = width
 
-    Parameters
-    ----------
-    syllabus_data : dict
-        Course metadata
-    descriptors : list, None
-        Course description information
+    def format(self, text):
+        """Format a description with paragraph wrapping.
 
-    Returns
-    -------
-    dict
-        Course metadata with formatted catalog and descriptions
-    """
-    if descriptors is None:
-        return syllabus_data
+        Parameters
+        ----------
+        text : str
+            Text to format
 
-    for desc in descriptors:
-        key, val = desc
-        syllabus_data[key] = wrap_paragraphs(
-            syllabus_data.get(val, ""), width=79
-        )
-
-    return syllabus_data
+        Returns
+        -------
+        str
+            Wrapped text
+        """
+        return wrap_paragraphs(text, width=self.width)
 
 
-def format_course_designation(designation):
-    """Format course designation.
+class DesignationFormatter:
+    """Formats course designations."""
 
-    Parameters
-    ----------
-    designation : str
-        The course designation code
+    @staticmethod
+    def format(designation):
+        """Format course designation.
 
-    Returns
-    -------
-    str
-        Course designation
+        Parameters
+        ----------
+        designation : str
+            The course designation code
 
-    Raises
-    ------
-    NotImplementedError
-        If the course designation doesn't have a template
-    """
-    if designation == "None":
-        return designation
-    elif designation == "KLPC":
-        return SpecialCourseDesignation.KLPC.render()
-    else:
-        raise NotImplementedError(f"No template for {designation}")
+        Returns
+        -------
+        str
+            Formatted course designation
+
+        Raises
+        ------
+        NotImplementedError
+            If the course designation doesn't have a template
+        """
+        match designation:
+            case "None":
+                return designation
+            case "KLPC":
+                return SpecialCourseDesignation.KLPC.render()
+            case _:
+                raise NotImplementedError(f"No template for {designation}")
 
 
-def compile_md(syllabus_data, schedule, md_files):
-    """Compile Markdown and send to stdout.
+class SyllabusDataFormatter:
+    """Handles all syllabus data transformations."""
+
+    tables = ("assignment", "book", "objective")
+    descriptors = [
+        ("catalog_description", "course_catalog"),
+        ("course_description", "course_description"),
+    ]
+
+    def __init__(self, syllabus_data, schedule):
+        """Initialize the object.
+
+        Parameters
+        ----------
+        syllabus_data : dict
+            Course metadata
+        schedule : dict
+            Schedule data
+        """
+        self.data = syllabus_data.copy()
+        self.schedule = schedule
+        self.registry = self._create_registry()
+
+    def _create_registry(self):
+        """Create and configure the formatter registry.
+
+        Returns
+        -------
+        FormatterRegistry
+            The formatter registry
+        """
+        registry = FormatterRegistry()
+
+        # Register table formatters
+        for item_type in self.tables:
+            registry.register(
+                item_type,
+                lambda items, t=item_type: TableFormatter.format_items(
+                    items, t
+                ),
+            )
+
+        return registry
+
+    def format(self):
+        """Apply all formatting transformations.
+
+        Returns
+        -------
+        dict
+            Formatted syllabus data
+        """
+        self._format_tables()
+        self._format_schedule()
+        self._flatten_data()
+        self._format_descriptions()
+        self._format_designation()
+
+        return self.data
+
+    def _format_tables(self):
+        """Format TOML table arrays."""
+        for item_type in self.tables:
+            if item_type not in self.data:
+                continue
+
+            md = self.registry.format(item_type, self.data[item_type])
+            self.data[f"{item_type}s"] = md
+
+    def _format_schedule(self):
+        """Format the schedule."""
+        formatter = ScheduleFormatter(self.schedule)
+        self.data["course_schedule"] = formatter.format()
+
+    def _flatten_data(self):
+        """Flatten nested data structure."""
+        self.data = flatten_config(self.data)
+
+    def _format_descriptions(self):
+        """Format catalog and course descriptions."""
+        formatter = DescriptionFormatter()
+        for new_key, old_key in self.descriptors:
+            if old_key not in self.data:
+                continue
+
+            self.data[new_key] = formatter.format(self.data[old_key])
+
+    def _format_designation(self):
+        """Format course designation."""
+        desig = self.data.get("course_designation", "None")
+        self.data["course_designation"] = DesignationFormatter.format(desig)
+
+
+class TemplateRenderer:
+    """Renders markdown templates with formatted data."""
+
+    def __init__(self, template_paths):
+        """Initialize the object.
+
+        Parameters
+        ----------
+        template_paths : list[Path]
+            Paths to template files
+        """
+        self.template_paths = template_paths
+
+    def render(self, context):
+        """Render templates with provided context.
+
+        Parameters
+        ----------
+        context : dict
+            Template context data
+
+        Returns
+        -------
+        str
+            Rendered markdown content
+        """
+        docs = [path.read_text().strip() for path in self.template_paths]
+        template = Template("\n\n".join(docs))
+
+        return template.safe_substitute(**context)
+
+
+class SyllabusCompiler:
+    """Compiles syllabus data into markdown."""
+
+    def __init__(self, syllabus_data, schedule, template_paths):
+        """Initialize the object.
+
+        Parameters
+        ----------
+        syllabus_data : dict
+            Course metadata
+        schedule : dict
+            Schedule data
+        template_paths : list[Path]
+            Paths to template files
+        """
+        self.syllabus_data = syllabus_data
+        self.schedule = schedule
+        self.template_paths = template_paths
+        self.validator = SyllabusValidator()
+
+    def compile(self):
+        """Execute the compilation pipeline.
+
+        Returns
+        -------
+        str
+            Compiled markdown
+
+        Raises
+        ------
+        ValueError
+            If validation fails
+        """
+        self.validator.validate(self.syllabus_data)
+
+        formatter = SyllabusDataFormatter(self.syllabus_data, self.schedule)
+        formatted = formatter.format()
+
+        renderer = TemplateRenderer(self.template_paths)
+        output = renderer.render(formatted)
+
+        return output
+
+
+def compile_md(syllabus_data, schedule, template_paths):
+    """Compile to markdown and send to stdout.
 
     Parameters
     ----------
     syllabus_data : dict
         Course metadata
     schedule : dict
-        Schedule of meetings
-    md_files : list[Path]
-        Markdown template files for each syllabus component
+        Schedule data
+    template_paths : list[Path]
+        Paths to template files
     """
-    items = ("assignment", "book", "objective")
-    syllabus_data = format_toml_tables(syllabus_data, items)
-    syllabus_data["course_schedule"] = format_schedule(schedule)
-
-    # Flatten the config for the rest of the items -- they aren't nested
-    syllabus_data = flatten_config(syllabus_data)
-
-    descriptors = [
-        ("catalog_description", "course_catalog"),
-        ("course_description", "course_description"),
-    ]
-    syllabus_data = format_descriptions(syllabus_data, descriptors)
-    desig = syllabus_data.get("course_designation", "None")
-    syllabus_data["course_designation"] = format_course_designation(desig)
-
-    # Open the markdown files, then unpack syllabus values in the mapping and
-    # stream out the results
-    docs = [file.read_text().strip() for file in md_files]
-    content = Template("\n\n".join(docs)).safe_substitute(**syllabus_data)
-    print(content)
+    compiler = SyllabusCompiler(syllabus_data, schedule, template_paths)
+    output = compiler.compile()
+    print(output)
