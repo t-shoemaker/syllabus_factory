@@ -9,7 +9,7 @@ number = "ENGL 207"
 title = "Human Thinking and Digital Culture"
 section = 500
 credits = 3
-description = """
+catalog = """
 Introduction to digital culture(s); exposure to some methodologies for the
 interpretation and critique of digital media from the humanities. These may
 include but are not limited to approaches from Critical Data Studies, Media
@@ -17,7 +17,8 @@ Studies, Digital Humanities, and the History of Science and Technology.
 Students can expect to gain experience analyzing digital media and expect to
 develop critical thinking and intercultural competence while engaging in
 respectful discourse on complex topics related to digital cultures.
-
+"""
+description = """
 This course is about the collision of data and culture. While it is hardly an
 understatement to say that data now suffuses most of everyday life, what are
 the consequences of treating culture as data? What does this transformation
