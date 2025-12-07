@@ -17,8 +17,11 @@ def format_toml_tables(syllabus_data, items=None):
     Returns
     -------
     dict
-        Syllabus data with formatted tables
+        Course metadata with formatted tables
     """
+    if items is None:
+        return syllabus_data
+
     for item in items:
         entries = []
         for entry in syllabus_data[item]:
@@ -94,6 +97,33 @@ def format_day(day):
     )
 
 
+def format_descriptions(syllabus_data, descriptors=None):
+    """Format catalog and course descriptions.
+
+    Parameters
+    ----------
+    syllabus_data : dict
+        Course metadata
+    descriptors : list, None
+        Course description information
+
+    Returns
+    -------
+    dict
+        Course metadata with formatted catalog and descriptions
+    """
+    if descriptors is None:
+        return syllabus_data
+
+    for desc in descriptors:
+        key, val = desc
+        syllabus_data[key] = wrap_paragraphs(
+            syllabus_data.get(val, ""), width=79
+        )
+
+    return syllabus_data
+
+
 def format_course_designation(designation):
     """Format course designation.
 
@@ -138,10 +168,12 @@ def compile_md(syllabus_data, schedule, md_files):
 
     # Flatten the config for the rest of the items -- they aren't nested
     syllabus_data = flatten_config(syllabus_data)
-    syllabus_data["course_description"] = wrap_paragraphs(
-        syllabus_data.get("course_description", ""), width=79
-    )
 
+    descriptors = [
+        ("catalog_description", "course_catalog"),
+        ("course_description", "course_description"),
+    ]
+    syllabus_data = format_descriptions(syllabus_data, descriptors)
     desig = syllabus_data.get("course_designation", "None")
     syllabus_data["course_designation"] = format_course_designation(desig)
 

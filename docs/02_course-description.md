@@ -1,3 +1,7 @@
+### Catalog Description
+
+$catalog_description
+
 ### Course Description
 
 $course_description
