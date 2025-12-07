@@ -41,24 +41,7 @@ exclude = [
 ]
 
 [[objective]]
-description = """Identify and explain key themes and ideas in the history of
-literary criticism"""
-
-[[objective]]
-description = """Gain broad familiarity with various critical movements and
-approaches"""
-
-[[objective]]
-description = """Understand how critics often develop their own interpretations
-and arguments in response to other critics"""
-
-[[objective]]
-description = """Hone the skills necessary to situate your interpretations
-alongside the thoughts, opinions, ideas, and interpretations of others"""
-
-[[objective]]
-description = """Analyze critical arguments and use them to construct arguments
-of your own"""
+description = """TBD"""
 
 [[book]]
 title = "_Weapons of Math Destruction_"
