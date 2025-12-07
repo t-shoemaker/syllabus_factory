@@ -1,27 +1,7 @@
-from dataclasses import dataclass, asdict
-from pathlib import Path
 from string import Template
 
 from templates import MarkdownEntry, SpecialCourseDesignation
 from utils import flatten_config, wrap_paragraphs
-
-
-@dataclass
-class TemplateConfig:
-    """Context for template rendering."""
-
-    syllabus_data: dict
-    schedule: dict
-
-    def to_flat_dict(self):
-        """Convert to flat dictionary for template substitution.
-
-        Returns
-        -------
-        dict
-            Flattened dictionary
-        """
-        return flatten_config({**self.syllabus_data})
 
 
 class SyllabusValidator:
