@@ -9,13 +9,14 @@ number = "ENGL 308"
 title = "History of Literary Criticism"
 section = 500
 credits = 3
-description = """
+catalog = """
 History of literary thought from antiquity to the present, including writers
 such as Plato, Aristotle, 'Longinus,' Sidney, Shelley, and Dryden; analysis of
 genres such as tragedy, lyric, and film; critical approaches such as new
 criticism, structuralism, deconstruction, Marxism, feminism, new historicism,
 and film studies.
-
+"""
+description = """
 Our overarching concern will be the problem of representation: What is the
 nature of representation? How does it differ from the real? What is it for? How
 do we assess what a representation represents? After posing these questions in

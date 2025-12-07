@@ -2,21 +2,21 @@
 name = "Tyler Shoemaker"
 email = "tshoemaker@tamu.edu"
 office = "LAAH 480"
-hours = "TR 1:00--2:00pm"
+hours = "TR 11:00am--12:00pm"
 
 [course]
 number = "ENGL 308"
 title = "History of Literary Criticism"
 section = 500
 credits = 3
+catalog = """
+History of literary thought from antiquity to the present, including writers
+such as Plato, Aristotle, 'Longinus,' Sidney, Shelley, and Dryden; analysis of
+genres such as tragedy, lyric, and film; critical approaches such as new
+criticism, structuralism, deconstruction, Marxism, feminism, new historicism,
+and film studies.
+"""
 description = """
-History of critical thought about art and culture from antiquity to the
-present; topics and readings span a variety of eras, approaches, and artistic
-genres. Key themes and ideas in criticism may be presented in the context of
-historical figures or entire critical movements such as new criticism,
-structuralism and poststructuralism, historical materialism, feminism, race and
-ethnic studies, and cultural studies, among others.
-
 Our overarching concern will be the problem of representation: What is the
 nature of representation? How does it differ from the real? What is it for? How
 do we assess what a representation represents? After posing these questions in
@@ -35,7 +35,9 @@ end = "04-28"
 weekdays = "TR" 
 time = "9:35--10:50am"
 location = "LAAH 372"
-exclude = [ "01-19", "03-09", "03-10", "03-11", "03-12", "03-13", "04-03" ]
+exclude = [ 
+  "01-19", "03-09", "03-10", "03-11", "03-12", "03-13", "04-03", "04-09" 
+]
 
 [[objective]]
 description = """Identify and describe key themes and ideas in the history of
@@ -70,7 +72,7 @@ due = "By 2/12"
 [[assignment]]
 name = "Reading Response 2"
 points = 20
-due = "By 3/26"
+due = "By 3/19"
 
 [[assignment]]
 name = "Reading Response 3"

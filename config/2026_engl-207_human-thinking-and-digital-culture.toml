@@ -1,0 +1,97 @@
+[instructor]
+name = "Tyler Shoemaker"
+email = "tshoemaker@tamu.edu"
+office = "LAAH 480"
+hours = "TR 11:00am--12:00pm"
+
+[course]
+number = "ENGL 207"
+title = "Human Thinking and Digital Culture"
+section = 500
+credits = 3
+description = """
+Introduction to digital culture(s); exposure to some methodologies for the
+interpretation and critique of digital media from the humanities. These may
+include but are not limited to approaches from Critical Data Studies, Media
+Studies, Digital Humanities, and the History of Science and Technology.
+Students can expect to gain experience analyzing digital media and expect to
+develop critical thinking and intercultural competence while engaging in
+respectful discourse on complex topics related to digital cultures.
+
+This course is about the collision of data and culture. While it is hardly an
+understatement to say that data now suffuses most of everyday life, what are
+the consequences of treating culture as data? What does this transformation
+suggestion about our current media environment? Our cultural politics? And if
+culture is data, are data culture? If so, how? As we consider these questions,
+we will cover a range of topics, from consumer analytics and algorithmic bias
+to the new AI.
+"""
+prerequisites = "None"
+designation = "KLPC"
+
+[schedule]
+year = "2026"
+start = "01-12"
+end = "04-28"
+weekdays = "TR" 
+time = "8:00--9:15am"
+location = "LAAH 301"
+exclude = [ 
+  "01-19", "03-09", "03-10", "03-11", "03-12", "03-13", "04-03", "04-09" 
+]
+
+[[objective]]
+description = """Identify and explain key themes and ideas in the history of
+literary criticism"""
+
+[[objective]]
+description = """Gain broad familiarity with various critical movements and
+approaches"""
+
+[[objective]]
+description = """Understand how critics often develop their own interpretations
+and arguments in response to other critics"""
+
+[[objective]]
+description = """Hone the skills necessary to situate your interpretations
+alongside the thoughts, opinions, ideas, and interpretations of others"""
+
+[[objective]]
+description = """Analyze critical arguments and use them to construct arguments
+of your own"""
+
+[[book]]
+title = "_Weapons of Math Destruction_"
+author = "Cathy O'Neil"
+isbn = "978-0553418811"
+
+[[book]]
+title = "_People's Choice Literature: The Most Wanted and Unwanted Novels_"
+author = "Tom Comitta"
+isbn = "978-0231219280"
+
+[[assignment]]
+name = "Data Log"
+points = 35
+due = "Ongoing"
+
+[[assignment]]
+name = "Midterm exam"
+points = 20
+due = "3/5"
+
+[[assignment]]
+name = "RecSys and You"
+points = 5
+due = "4/14"
+
+[[assignment]]
+name = "Final paper"
+points = 30
+due = "4/30"
+
+[[assignment]]
+name = "Participation"
+points = 10
+due = "Ongoing"
+
