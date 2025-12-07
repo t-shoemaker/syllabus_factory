@@ -173,7 +173,8 @@ title = "The Unconscious"
   no_class = false
   agenda = [
     """Jacques Lacan. The Mirror Stage as Formative of the Function of the I \
-    as Revealed in Psychoanalytic Experience: 1111-1117"""
+    as Revealed in Psychoanalytic Experience: 1111-1117""",
+     "**Final call:** Reading Response 2"
   ]
 
 [week-11]
@@ -190,33 +191,14 @@ title = "The Other"
   date = "3/26"
   weekday = "Thursday"
   no_class = false
-  agenda = [
-    "Toni Morrison. Unspeakable Things Unspoken: 1673-1684",
-     "**Final call:** Reading Response 2"
-  ]
+  agenda = ["Toni Morrison. Unspeakable Things Unspoken: 1673-1684"]
 
 [week-12]
 num = 12
-title = "Performativity"
+title = "Cultural Politics"
 
   [[week-12.days]]
   date = "3/31"
-  weekday = "Tuesday"
-  no_class = false
-  agenda = ["J.L. Austin. Performative Utterances: 1236-1248"]
-
-  [[week-12.days]]
-  date = "4/2"
-  weekday = "Thursday"
-  no_class = false
-  agenda = ["Judith Butler. Gender Trouble: 2375-2388"]
-
-[week-13]
-num = 13
-title = "Cultural Politics"
-
-  [[week-13.days]]
-  date = "4/7"
   weekday = "Tuesday"
   no_class = false
   agenda = [
@@ -224,13 +206,32 @@ title = "Cultural Politics"
     1337-1350"""
   ]
 
-  [[week-13.days]]
-  date = "4/9"
+  [[week-12.days]]
+  date = "4/2"
   weekday = "Thursday"
   no_class = false
   agenda = [
     "Stuart Hall. Cultural Studies and Its Theoretical Legacies: 1705-1717"
   ]
+
+[week-13]
+num = 13
+title = "Institutional Critique"
+
+  [[week-13.days]]
+  date = "4/7"
+  weekday = "Tuesday"
+  no_class = false
+  agenda = [
+    """Ngũgĩ Wa Thiong'o et al. On The Abolition of the English Department: \
+    1912-1916"""
+  ]
+
+  [[week-13.days]]
+  date = "4/9"
+  weekday = "Thursday"
+  no_class = true
+  agenda = []
 
 [week-14]
 num = 14
