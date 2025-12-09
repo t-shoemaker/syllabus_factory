@@ -2,6 +2,7 @@ import shutil
 import sys
 from html.parser import HTMLParser
 from pathlib import Path
+from urllib.error import URLError
 from urllib.parse import urljoin
 from urllib.request import urlretrieve
 
@@ -12,6 +13,8 @@ MSR_PAGE = urljoin(
 
 
 class MSRParser(HTMLParser):
+    """Parser for the Minimum Syllabus Requirements page."""
+
     def __init__(self):
         """Initialize the parser."""
         super().__init__()
@@ -63,17 +66,17 @@ class MSRParser(HTMLParser):
                 select = input(
                     f"Select one of the following to download:\n{output}\nDownload: "
                 )
+
                 try:
                     select = int(select)
                 except ValueError:
                     print(err)
                     continue
+
                 if 1 <= select <= len(self.links):
-                    break
+                    return select - 1
                 else:
                     print(err)
-
-            return select - 1
 
         except KeyboardInterrupt:
             print("\nDownload cancelled")
@@ -95,24 +98,21 @@ class MSRParser(HTMLParser):
         select = self._prompt_user()
         available = list(self.links)
         request = urljoin(SENATE_PAGE, str(available[select]))
+        path = None
 
         try:
             path, headers = urlretrieve(request)
             filename = available[select].name if not filename else filename
             shutil.move(path, filename)
             print(f"Successfully downloaded: {available[select].name}")
-        except Exception as e:
+
+        except URLError as e:
             print(f"Download failed: {e}\nRequested: {request}")
-            try:
-                Path(path).unlink(missing_ok=True)
-            except (NameError, FileNotFoundError):
-                pass
             sys.exit(1)
+
         finally:
-            try:
+            if path:
                 Path(path).unlink(missing_ok=True)
-            except (NameError, FileNotFoundError):
-                pass
 
 
 def get_reference_docx(filename):
