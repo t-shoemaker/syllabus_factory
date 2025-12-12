@@ -2,9 +2,9 @@
 
 $catalog_description
 
-### Course Description
+### Section Description
 
-$course_description
+$section_description
 
 ### Course Prerequisites
 

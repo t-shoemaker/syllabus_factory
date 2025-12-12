@@ -255,7 +255,7 @@ class SyllabusDataFormatter:
     tables = ("assignment", "book", "objective")
     descriptors = [
         ("catalog_description", "course_catalog"),
-        ("course_description", "course_description"),
+        ("section_description", "course_description"),
     ]
 
     def __init__(self, syllabus_data, schedule):
