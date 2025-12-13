@@ -19,6 +19,8 @@ overall curve and I do not round up grades on assignments.
 |:---------|:-------|:-----------|
 $assignments
 \
+$assignment_description
+
 Assignment sheets with further details about each of the above assignments will
 be circulated over the course of the term.
 
