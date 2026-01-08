@@ -1,0 +1,292 @@
+[week-1]
+num = 1
+title = "The Data Deluge"
+
+  [[week-1.days]]
+  date = "1/13"
+  weekday = "Tuesday"
+  no_class = false
+  agenda = ["Introductions"]
+
+  [[week-1.days]]
+  date = "1/15"
+  weekday = "Thursday"
+  no_class = false
+  agenda = [
+    "Chris Anderson. The End of Theory",
+    "Rob Kitchin. Excerpts from Data Lives: 3-13; 111-119"
+  ]
+
+[week-2]
+num = 2
+title = "How Data Happened"
+
+  [[week-2.days]]
+  date = "1/20"
+  weekday = "Tuesday"
+  no_class = false
+  agenda = [
+    "Chris Wiggins and Matthew Jones. How Data Happened: 18-53",
+    "Browse: [Punch Card Archive](https://punchcardarchive.com/)",
+  ]
+
+  [[week-2.days]]
+  date = "1/22"
+  weekday = "Thursday"
+  no_class = false
+  agenda = ["Wiggins and Jones, cont: 196-229"]
+
+[week-3]
+num = 3
+title = "Data, Raw and Cooked"
+
+  [[week-3.days]]
+  date = "1/27"
+  weekday = "Tuesday"
+  no_class = false
+  agenda = [
+    """Lisa Gitelman and Virginia Jackson. Introduction, Raw Data is an \
+    Oxymoron: 1-14""",
+    "**In class:** Data log set up",
+  ]
+
+  [[week-3.days]]
+  date = "1/29"
+  weekday = "Thursday"
+  no_class = false
+  agenda = [
+    """Catherine D'Ignazio and Lauren Klein. The Numbers Don't Speak for \
+    Themselves: 149-172""",
+  ]
+
+[week-4]
+num = 4
+title = "Big Data"
+
+  [[week-4.days]]
+  date = "2/3"
+  weekday = "Tuesday"
+  no_class = false
+  agenda = [
+    "Lev Manovich. How to Compare One Million Images?: 249-278",
+    "Browse: [Open Syllabus](https://opensyllabus.org)"
+  ]
+
+  [[week-4.days]]
+  date = "2/5"
+  weekday = "Thursday"
+  no_class = false
+  agenda = ["Stanisław Lem. Gigamesh: 28-40"]
+
+[week-5]
+num = 5
+title = "Data and Its Discontents I"
+
+  [[week-5.days]]
+  date = "2/10"
+  weekday = "Tuesday"
+  no_class = false
+  agenda = ["Cathy O'Neil. Weapons of Math Destruction: 1-67"]
+
+  [[week-5.days]]
+  date = "2/12"
+  weekday = "Thursday"
+  no_class = false
+  agenda = ["O'Neil, cont: 68-104"]
+
+[week-6]
+num = 6
+title = "Data and Its Discontents II"
+
+  [[week-6.days]]
+  date = "2/17"
+  weekday = "Tuesday"
+  no_class = false
+  agenda = ["O'Neil, cont: 105-140"]
+
+  [[week-6.days]]
+  date = "2/19"
+  weekday = "Thursday"
+  no_class = false
+  agenda = ["O'Neil, cont: 141-198"]
+
+[week-7]
+num = 7
+title = "Missingness"
+
+  [[week-7.days]]
+  date = "2/24"
+  weekday = "Tuesday"
+  no_class = false
+  agenda = ["O'Neil, cont: 199-232"]
+
+  [[week-7.days]]
+  date = "2/26"
+  weekday = "Thursday"
+  no_class = false
+  agenda = [
+    "Hito Steyerl. [How Not to Be Seen](https://www.artforum.com/video/hito-steyerl-how-not-to-be-seen-a-fucking-didactic-educational-mov-file-2013-165845/)",
+    "Mimi Ọnụọha. [The Library of Missing Datasets](https://github.com/MimiOnuoha/missing-datasets)",
+  ]
+
+[week-8]
+num = 8
+title = "Midterm"
+
+  [[week-8.days]]
+  date = "3/3"
+  weekday = "Tuesday"
+  no_class = false
+  agenda = ["Exam review day"]
+
+  [[week-8.days]]
+  date = "3/5"
+  weekday = "Thursday"
+  no_class = false
+  agenda = ["**In class:** Data log check-in, updates"]
+
+[week-9]
+num = 9
+title = "Spring Break"
+
+  [[week-9.days]]
+  date = "3/10"
+  weekday = "Tuesday"
+  no_class = true
+  agenda = []
+
+  [[week-9.days]]
+  date = "3/12"
+  weekday = "Thursday"
+  no_class = true
+  agenda = []
+
+[week-10]
+num = 10
+title = "Case Study: The Netflix Prize"
+
+  [[week-10.days]]
+  date = "3/17"
+  weekday = "Tuesday"
+  no_class = false
+  agenda = [
+    "The Netflix Prize Rules: 1-9",
+    """Robert Bell et al. All Together Now: A Perspective on the Netflix \
+    Prize: 24-29"""
+  ]
+
+  [[week-10.days]]
+  date = "3/19"
+  weekday = "Thursday"
+  no_class = false
+  agenda = ["Nick Seaver. Captivating Algorithms: 49-71"]
+
+[week-11]
+num = 11
+title = "Case Study: Prediction Markets"
+
+  [[week-11.days]]
+  date = "3/24"
+  weekday = "Tuesday"
+  no_class = false
+  agenda = [
+    "Robin Hanson. [Combinatorial Prediction Markets](https://videolectures.net/videos/uai08_hanson_cpm): 0:00-19:00",
+    "Browse: [Iowa Electronic Markets](https://iemweb.biz.uiowa.edu/)",
+  ]
+
+  [[week-11.days]]
+  date = "3/26"
+  weekday = "Thursday"
+  no_class = false
+  agenda = [
+    "Emily Nicolle and Justina Lee. [Coinbase CEO Stunt Exposes Prediction Market Vulnerability](https://www.bloomberg.com/news/articles/2025-10-31/coinbase-ceo-stunt-exposes-vulnerability-in-prediction-markets?sref=1kJVNqnU)",
+    "Max Read. [Predictions Markets and the Suckerfication Crisis](https://maxread.substack.com/p/predictions-markets-and-the-suckerfication)"
+  ]
+
+[week-12]
+num = 12
+title = "Case Study: Large Language Models"
+
+  [[week-12.days]]
+  date = "3/31"
+  weekday = "Tuesday"
+  no_class = false
+  agenda = [
+    "OpenAI. [Better Language Models and Their Implications](https://openai.com/index/better-language-models/)",
+    "Karen Hao. A Civilizing Mission: 46-72",
+  ]
+
+  [[week-12.days]]
+  date = "4/2"
+  weekday = "Thursday"
+  no_class = false
+  agenda = [
+    "Ted Underwood. [Mapping the Latent Spaces of Culture](https://startwords.cdh.princeton.edu/issues/3/mapping-latent-spaces/)",
+    """Henry Farrell et al. Large AI Models are Cultural and Social \
+    Technologies: 1153-1156"""
+  ]
+
+[week-13]
+num = 13
+title = "Culture on Demand"
+
+  [[week-13.days]]
+  date = "4/7"
+  weekday = "Tuesday"
+  no_class = false
+  agenda = [
+    "Tom Comitta. Introduction, People's Choice Literature: 1-24",
+    "**In class:** Vote on which version of Comitta's novel to read",
+  ]
+
+  [[week-13.days]]
+  date = "4/9"
+  weekday = "Thursday"
+  no_class = true
+  agenda = []
+
+[week-14]
+num = 14
+title = "People's Choice Literature I"
+
+  [[week-14.days]]
+  date = "4/14"
+  weekday = "Tuesday"
+  no_class = false
+  agenda = ["Comitta, The Most (Wanted | Unwanted) Novel: TBD"]
+
+  [[week-14.days]]
+  date = "4/16"
+  weekday = "Thursday"
+  no_class = false
+  agenda = ["Comitta, cont: TBD"]
+
+[week-15]
+num = 15
+title = "People's Choice Literature II"
+
+  [[week-15.days]]
+  date = "4/21"
+  weekday = "Tuesday"
+  no_class = false
+  agenda = ["Comitta, cont: TBD"]
+
+  [[week-15.days]]
+  date = "4/23"
+  weekday = "Thursday"
+  no_class = false
+  agenda = ["Comitta, cont: TBD"]
+
+[week-16]
+num = 16
+title = "Conclusion"
+
+  [[week-16.days]]
+  date = "4/28"
+  weekday = "Tuesday"
+  no_class = false
+  agenda = [
+    "Exam review day",
+    "**Due:** Data log reflection essay"
+  ]
+

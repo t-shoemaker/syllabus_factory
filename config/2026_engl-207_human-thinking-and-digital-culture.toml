@@ -10,22 +10,70 @@ title = "Human Thinking and Digital Culture"
 section = 500
 credits = 3
 catalog = """
-Introduction to digital culture(s); exposure to some methodologies for the
-interpretation and critique of digital media from the humanities. These may
-include but are not limited to approaches from Critical Data Studies, Media
-Studies, Digital Humanities, and the History of Science and Technology.
-Students can expect to gain experience analyzing digital media and expect to
-develop critical thinking and intercultural competence while engaging in
-respectful discourse on complex topics related to digital cultures.
+Introduction to methodology, scope and practice of digital humanities; overview
+of digital research culture; evaluation of digital media as tools for thinking.
 """
 description = """
-This course is about the collision of data and culture. While it is hardly an
-understatement to say that data now suffuses most of everyday life, what are
-the consequences of treating culture as data? What does this transformation
-suggestion about our current media environment? Our cultural politics? And if
-culture is data, are data culture? If so, how? As we consider these questions,
-we will cover a range of topics, from consumer analytics and algorithmic bias
-to the new AI.
+Our focus this semester will be on the collision of data and culture. While it
+is hardly an understatement to say that digital media suffuse most of everyday
+life, the datafication of culture poses key questions about digital media's
+role in shaping how we understand, value, and experience our present moment. We
+will ask: What are the consequences of treating culture as a form of data? What
+does this transformation indicate about our media environment and our cultural
+politics? And if culture is data, is data culture? If so, how? How might we
+study culture via data, and vice versa?
+
+The first half of the semester covers the history and theory of data in its
+modern form. In the second half we will turn to case studies in which the
+collision of data and culture is especially charged: recommender systems,
+cultural prediction markets, and generative AI. We conclude with an
+experimental novel---the product of a "national literature survey," which
+polled people about their preferred elements in a story. 
+
+**Course content note --** Digital media are everywhere and inflect wide swaths
+of contemporary life, from personalized ads to global politics. Contending with
+their scope and influence may thus entail discussions of many aspects of human
+experience and culture, including race, gender, sexuality, class, and other
+axes of identity and power. While students will never be required to adopt a
+specific opinion with respect to these matters, you can expect to engage with
+challenging ideas, encounter perspectives that may differ from your own, and
+think critically about how digital media shape---and are shaped by---these
+social dynamics.
+"""
+assignments = """
+The **midterm** and **final exams** are take-home tests, which consist of 25
+multiple-choice questions and 1 essay question. You will have a weeklong window
+to complete them; within those times, you can choose any 60-minute block on
+Canvas and take the tests. Exams are open-book but must be done individually by
+each student. If you encounter technical difficulties during the exam, document
+the issue as much as you can and contact me immediately.
+
+Before each exam, we will have a review session in which you will give a
+two-minute presentation on a key concept from the course. Both count toward
+your **participation** grade, in addition to the general participation
+requirements outlined below. These sessions fulfill the oral communication
+requirements of the KLPC designation.
+
+In the third week of the semester, you will set up a **data log**, which you
+will submit every week via Canvas. This log should feature entries from a
+cultural data source of your choosing. While we will discuss some common
+sources in class, I invite you to think capaciously about the kind of data you
+would like to collect. Regardless of the source, you will devise a system for
+collecting and formatting this data and then record it in your log. This system
+demonstrates the critical thinking requirement of the KLPC designation. 
+
+At the end of the semester, you will write a short, 500-word **reflection
+essay** summarizing your work on the data log. In this essay, you might remark
+on your collection process, the efficacy (or shortcomings) of your data
+formatting decisions, any changes you made to that system during the semester,
+trends or patterns you discovered in the data, etc. You should also speak to
+how your data illuminates some aspect of contemporary life. Both points of
+reflection fulfill the social and personal responsibility requirements of the
+KLPC designation, respectively.
+
+Finally, your reflection essay should also feature at least **data
+visualization** (produced in a manner of your own choosing). This visualization
+fulfills the visual communication requirement of the KLPC designation.
 """
 prerequisites = "None"
 designation = "KLPC"
@@ -42,7 +90,24 @@ exclude = [
 ]
 
 [[objective]]
-description = """TBD"""
+description = """Describe major historical and theoretical perspectives on data
+and its role in contemporary media and cultural life"""
+
+[[objective]]
+description = """Analyze how specific data-driven systems shape cultural
+experience, representation, and power"""
+
+[[objective]]
+description = """Evaluate the ethical and political implications of datafied
+culture"""
+
+[[objective]]
+description = """Use methods from the digital humanities and data science to
+study cultural objects"""
+
+[[objective]]
+description = """Communicate interpretations of cultural data through written
+argument, oral presentation, and basic data visualization"""
 
 [[book]]
 title = "_Weapons of Math Destruction_"
@@ -55,22 +120,22 @@ author = "Tom Comitta"
 isbn = "978-0231219280"
 
 [[assignment]]
-name = "Data Log"
-points = 35
+name = "Data log"
+points = 15
 due = "Ongoing"
 
 [[assignment]]
 name = "Midterm exam"
-points = 20
-due = "3/5"
+points = 30
+due = "3/6"
 
 [[assignment]]
-name = "RecSys and You"
-points = 5
-due = "4/14"
+name = "Data log reflection essay and visualization"
+points = 15
+due = "4/28"
 
 [[assignment]]
-name = "Final paper"
+name = "Final exam"
 points = 30
 due = "4/30"
 
