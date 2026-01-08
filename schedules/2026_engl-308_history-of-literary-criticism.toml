@@ -28,7 +28,7 @@ title = "Poetics"
   date = "1/22"
   weekday = "Thursday"
   no_class = false
-  agenda = ["Horace. Ars Poetica: 133-144"]
+  agenda = ["Sir Philip Sidney. The Defence of Poesy: 262-291"]
 
 [week-3]
 num = 3
@@ -113,7 +113,7 @@ title = "Ideology"
   weekday = "Tuesday"
   no_class = false
   agenda = [
-    """Karl Marx. Economic and Philosophic Manuscripts of 1844 and The /
+    """Karl Marx. Economic and Philosophic Manuscripts of 1844 and The \
     Fetishism of Commodities and the Secret Thereof: 655-659; 667-675"""
   ]
 
@@ -247,7 +247,7 @@ title = "Taking Stock"
   date = "4/16"
   weekday = "Thursday"
   no_class = false
-  agenda = ["Preparing for the exam"]
+  agenda = ["Exam review day"]
 
 [week-15]
 num = 15

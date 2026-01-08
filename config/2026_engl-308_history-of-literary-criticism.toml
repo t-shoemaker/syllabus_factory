@@ -24,6 +24,16 @@ the context of classical and renaissance texts, we will make multiple passes
 through the last 150 years of critical thought, tracing the dynamics of
 representation across art, language, culture, politics, psychic life, and
 subjectivity.
+
+**Content note --** Since Plato's _Republic_, literary-critical thought has
+foregrounded the social role of art and criticism. In many of our readings, we
+will encounter critics who explicitly tie their work to various social and
+political dynamics, including those that concern race, gender, sexuality,
+class, and other axes of identity and power. While students will never be
+required to adopt a specific opinion with respect to these matters, you can
+expect to engage with challenging ideas, encounter perspectives that may differ
+from your own, and think critically about how critics envision their own place
+within social and political contexts.
 """
 assignments = """
 Three times over the course of the semester you will write a 2-3 page **reading
@@ -32,20 +42,20 @@ practice the primary form of critical analysis that we do together in class:
 _explanation_ and _argument_. For each response, you will select a passage and
 construct an argument about the significance of this passage for the text in
 which it appears. Your argument, in other words, will focus on how the passage
-helps explain something about the texas a whole---what the text is about, what
-it tries to do, what its internal mechanics are, where its argument works, and
-where that argument might even fail.
+helps explain something about the text as a whole---what the text is about,
+what it tries to do, what its internal mechanics are, where its argument works,
+and where that argument might even fail.
 
 At the end of the semester, you will complete a take-home **final exam**, which
-consists of multiple-choice questions and short-answer responses. You will have
-one week to finish the exam. Each question will center on a key topic from the
-course and present several authors who have written about it. You will select
-one of these authors and explain how their work relates to the topic.
+consists of 8 multiple-choice questions and short-answer responses. You will
+have one week to finish the exam. Each question will center on a key topic from
+the course and present several authors who have written about it. You will
+select one of these authors and explain how their work relates to the topic.
 
 In addition to the baseline participation expectations outlined below, part of
 your **participation** grade entails filling out a short poll. This poll will
-ask you and your peers to vote on a final set of readings from the _Norton
-Anthology_, which we will cover together in the last full week of classes.
+ask you and your peers to vote on a final set of readings from our course
+textbook, which we will cover together in the last full week of classes.
 """
 prerequisites = "3 credits of literature at 200-level or above"
 designation = "None"
@@ -89,17 +99,17 @@ isbn = "978-0393602951"
 [[assignment]]
 name = "Reading Response 1"
 points = 20
-due = "By 2/12"
+due = "By 2/13"
 
 [[assignment]]
 name = "Reading Response 2"
 points = 20
-due = "By 3/19"
+due = "By 3/20"
 
 [[assignment]]
 name = "Reading Response 3"
 points = 20
-due = "By 4/23"
+due = "By 4/24"
 
 [[assignment]]
 name = "Final exam"
