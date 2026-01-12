@@ -84,7 +84,7 @@ start = "01-12"
 end = "04-28"
 weekdays = "TR" 
 time = "8:00--9:15am"
-location = "LAAH 301"
+location = "LAAH 372"
 exclude = [ 
   "01-19", "03-09", "03-10", "03-11", "03-12", "03-13", "04-03", "04-09" 
 ]
