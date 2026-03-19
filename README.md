@@ -39,7 +39,7 @@ Creating a Syllabus
 To create a syllabus, do the following:
 
 1. Make a new config file and save it to `configs` using the format
-   `<YYYY>_<COURSE-CODE>_<COURSE-NAME>.toml`
+   `<YYYY-SEMESTER>_<COURSE-CODE>_<COURSE-NAME>.toml`
 
 2. (Optional) Set an environment variable that corresponds to the config file
    ```sh
