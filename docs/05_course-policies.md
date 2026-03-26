@@ -32,7 +32,7 @@ work of your peers.
 
 **Graded Attendance –** Course attendance will be taken at the start of class.
 Students are allowed two unexcused absences over the course of the term. Every
-absence beyond this will incur a three-point penalty on your final grade.
+absence beyond this will incur a one-point penalty on your final grade.
 
 _Consult the University Policies below for guidelines about excused and
 unexcused absences._
