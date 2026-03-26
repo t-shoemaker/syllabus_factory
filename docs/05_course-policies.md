@@ -34,8 +34,8 @@ work of your peers.
 Students are allowed two unexcused absences over the course of the term. Every
 absence beyond this will incur a one-point penalty on your final grade.
 
-_Consult the University Policies below for guidelines about excused and
-unexcused absences._
+_Consult University Policies for guidelines about excused and unexcused
+absences._
 
 ### Late Work Policy
 
@@ -51,8 +51,8 @@ the assignment deadline. In your email, you should propose how many extra days
 you will need to complete your work. After we agree on a new deadline, I cannot
 extend it further. The standard one-point penalty will apply.
 
-_Consult the University Policies below for guidelines about make-up work due to
-excused absences._
+_Consult University Policies for guidelines about make-up work due to excused
+absences._
 
 ### Office Hours and Email 
 
