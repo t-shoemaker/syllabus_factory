@@ -1,0 +1,344 @@
+[week-1]
+num = 1
+title = "Imitation"
+
+  [[week-1.days]]
+  date = "8/24"
+  weekday = "Monday"
+  no_class = false
+  agenda = ["Introductions"]
+
+  [[week-1.days]]
+  date = "8/26"
+  weekday = "Wednesday"
+  no_class = false
+  agenda = ["Plato. The Republic: 58-89"]
+
+  [[week-1.days]]
+  date = "8/28"
+  weekday = "Friday"
+  no_class = false
+  agenda = ["Plato, cont."]
+
+[week-2]
+num = 2
+title = "Poetics"
+
+  [[week-2.days]]
+  date = "8/31"
+  weekday = "Monday"
+  no_class = false
+  agenda = ["Aristotle. The Poetics: 99-127"]
+
+  [[week-2.days]]
+  date = "9/2"
+  weekday = "Wednesday"
+  no_class = false
+  agenda = ["Aristotle, cont."]
+
+  [[week-2.days]]
+  date = "9/4"
+  weekday = "Friday"
+  no_class = false
+  agenda = ["Plato and Aristotle, cont."]
+
+[week-3]
+num = 3
+title = "Figuration"
+
+  [[week-3.days]]
+  date = "9/7"
+  weekday = "Monday"
+  no_class = true
+  agenda = []
+
+  [[week-3.days]]
+  date = "9/9"
+  weekday = "Wednesday"
+  no_class = false
+  agenda = ["Augustine of Hippo. On Christian Teaching: 164-175"]
+
+  [[week-3.days]]
+  date = "9/11"
+  weekday = "Friday"
+  no_class = false
+  agenda = ["Thomas Aquinas. Summa Theologica: 191-194"]
+
+[week-4]
+num = 4
+title = "Écriture"
+
+  [[week-4.days]]
+  date = "9/14"
+  weekday = "Monday"
+  no_class = false
+  agenda = ["Hélène Cixous. The Laugh of the Medusa: 1869-1886"]
+
+  [[week-4.days]]
+  date = "9/16"
+  weekday = "Wednesday"
+  no_class = false
+  agenda = ["Cixous, cont."]
+
+  [[week-4.days]]
+  date = "9/18"
+  weekday = "Friday"
+  no_class = false
+  agenda = ["Review: Classical and Medieval critics"]
+
+[week-5]
+num = 5
+title = "Invention"
+
+  [[week-5.days]]
+  date = "9/21"
+  weekday = "Monday"
+  no_class = false
+  agenda = [
+    "Sir Philip Sidney. The Defence of Poesy: 262-291",
+    "**Final call:** Reading Response 1"
+  ]
+
+  [[week-5.days]]
+  date = "9/23"
+  weekday = "Wednesday"
+  no_class = false
+  agenda = ["Sidney, cont."]
+
+  [[week-5.days]]
+  date = "9/25"
+  weekday = "Friday"
+  no_class = false
+  agenda = ["Aphra Behn. Preface to The Lucky Chance: 334-337"]
+
+[week-6]
+num = 6
+title = "Criticism"
+
+  [[week-6.days]]
+  date = "9/28"
+  weekday = "Monday"
+  no_class = false
+  agenda = ["Alexander Pope. An Essay on Criticism: 370-383"]
+
+  [[week-6.days]]
+  date = "9/30"
+  weekday = "Wednesday"
+  no_class = false
+  agenda = ["Pope, cont."]
+
+  [[week-6.days]]
+  date = "10/2"
+  weekday = "Friday"
+  no_class = false
+  agenda = ["David Hume. Of the Standard of Taste: 410-424"]
+
+[week-7]
+num = 7
+title = "Judgment"
+
+  [[week-7.days]]
+  date = "10/5"
+  weekday = "Monday"
+  no_class = false
+  agenda = ["Hume, cont."]
+
+  [[week-7.days]]
+  date = "10/7"
+  weekday = "Wednesday"
+  no_class = false
+  agenda = ["Immanuel Kant. Critique of Judgment: 425-467"]
+
+  [[week-7.days]]
+  date = "10/9"
+  weekday = "Friday"
+  no_class = false
+  agenda = ["Kant, cont."]
+
+[week-8]
+num = 8
+title = "Aesthetics"
+
+  [[week-8.days]]
+  date = "10/12"
+  weekday = "Monday"
+  no_class = false
+  agenda = ["Kant, cont."]
+
+  [[week-8.days]]
+  date = "10/14"
+  weekday = "Wednesday"
+  no_class = false
+  agenda = ["Sianne Ngai. Ugly Feelings: 2641-2650"]
+
+  [[week-8.days]]
+  date = "10/16"
+  weekday = "Friday"
+  no_class = false
+  agenda = ["Kant and Ngai, cont."]
+
+[week-9]
+num = 9
+title = "Interregnum"
+
+  [[week-9.days]]
+  date = "10/19"
+  weekday = "Monday"
+  no_class = false
+  agenda = ["Review: Renaissance and Enlightenment critics"]
+
+  [[week-9.days]]
+  date = "10/21"
+  weekday = "Wednesday"
+  no_class = true
+  agenda = []
+
+  [[week-9.days]]
+  date = "10/23"
+  weekday = "Friday"
+  no_class = true
+  agenda = []
+
+[week-10]
+num = 10
+title = "Imagination"
+
+  [[week-10.days]]
+  date = "10/26"
+  weekday = "Monday"
+  no_class = false
+  agenda = [
+    "William Wordsworth. Preface to Lyrical Ballads: 566-587",
+    "**Final call:** Reading Response 2"
+  ]
+
+  [[week-10.days]]
+  date = "10/28"
+  weekday = "Wednesday"
+  no_class = false
+  agenda = ["Wordsworth, cont."]
+
+  [[week-10.days]]
+  date = "10/30"
+  weekday = "Friday"
+  no_class = false
+  agenda = ["Percy Bysshe Shelley. A Defense of Poetry: 601-619"]
+
+[week-11]
+num = 11
+title = "The Poet"
+
+  [[week-11.days]]
+  date = "11/2"
+  weekday = "Monday"
+  no_class = false
+  agenda = ["Shelley, cont."]
+
+  [[week-11.days]]
+  date = "11/4"
+  weekday = "Wednesday"
+  no_class = false
+  agenda = ["Ralph Waldo Emerson. The Poet: 625-640"]
+
+  [[week-11.days]]
+  date = "11/6"
+  weekday = "Friday"
+  no_class = false
+  agenda = ["Emerson, cont."]
+
+[week-12]
+num = 12
+title = "Disenchantment"
+
+  [[week-12.days]]
+  date = "11/9"
+  weekday = "Monday"
+  no_class = false
+  agenda = [
+    "Karl Marx. The German Ideology and Capital: 659-660; 667-678"
+  ]
+
+  [[week-12.days]]
+  date = "11/11"
+  weekday = "Wednesday"
+  no_class = false
+  agenda = ["Marx, cont."]
+
+  [[week-12.days]]
+  date = "11/13"
+  weekday = "Friday"
+  no_class = false
+  agenda = [
+    """Friedrich Nietzsche. On Truth and Lying in a Non-Moral Sense: \
+    752-762"""
+  ]
+
+[week-13]
+num = 13
+title = "The Unconscious"
+
+  [[week-13.days]]
+  date = "11/16"
+  weekday = "Monday"
+  no_class = false
+  agenda = ["Sigmund Freud. The Uncanny and Fetishism: 799-820"]
+
+  [[week-13.days]]
+  date = "11/18"
+  weekday = "Wednesday"
+  no_class = false
+  agenda = ["Freud, cont."]
+
+  [[week-13.days]]
+  date = "11/20"
+  weekday = "Friday"
+  no_class = false
+  agenda = ["Paul Ricœur. The Conflict of Interpretations: 20-36"]
+
+[week-14]
+num = 14
+title = "Wrap-up"
+
+  [[week-14.days]]
+  date = "11/23"
+  weekday = "Monday"
+  no_class = false
+  agenda = ["Review: Romantic and Modern critics"]
+
+  [[week-14.days]]
+  date = "11/25"
+  weekday = "Wednesday"
+  no_class = true
+  agenda = []
+
+  [[week-14.days]]
+  date = "11/27"
+  weekday = "Friday"
+  no_class = true
+  agenda = []
+
+[week-15]
+num = 15
+title = "Review"
+
+  [[week-15.days]]
+  date = "11/30"
+  weekday = "Monday"
+  no_class = false
+  agenda = [
+    "Preparing for the Exam",
+    "**Final call:** Reading Response 3"
+  ]
+
+  [[week-15.days]]
+  date = "12/1"
+  weekday = "Tuesday"
+  no_class = false
+  agenda = ["Review Day"]
+
+  [[week-15.days]]
+  date = "12/2"
+  weekday = "Wednesday"
+  no_class = false
+  agenda = ["Review Day"]
+
