@@ -1,0 +1,139 @@
+[instructor]
+name = "Tyler Shoemaker"
+email = "tshoemaker@tamu.edu"
+office = "LAAH 480"
+hours = "W 10:00am--12:00pm"
+
+[course]
+number = "ENGL 334"
+title = "Science Fiction Past and Present"
+section = 500
+credits = 3
+catalog = """
+Origins and development of the science fiction genre. Instructors teaching this
+class will choose texts, assessments and approaches that represent current
+scholarship and satisfy course learning objectives.
+"""
+description = """
+This section of ENGL 334 steps through the major periods of English-language
+science fiction, beginning with the genre's origins in Mary Shelley's
+Frankenstein and ending with contemporary authors such as Ted Chiang and N.K.
+Jemisin. In between, we will read from Golden Age magazines in the 1930s-40s,
+New Wave writers in the 60s-70s, and cyberpunk in the 80s. Topics include the
+mind-body problem, mortality and immortality, artificial intelligence, language
+and cognition, theories of technology, dystopia, environmentalism, and others.
+
+**Course content note --** In many of our readings, we will see science fiction
+authors using speculation, fabulation, and even exaggeration as a means of
+reflecting on their own moment. These authors, in other words, use the genre's
+conventions to offer commentary and critique about various socio-political
+dynamics in their present (and ours). Some such dynamics concern race, gender,
+sexuality, class, and other axes of identity and power. While students will
+never be required to adopt a specific opinion with respect to these matters,
+you can expect to engage with challenging ideas, encounter perspectives that
+may differ from your own, and think critically about how authors envision their
+own place within social and political contexts.
+"""
+assignments = """
+This course has **two exams**, which cover content from our course readings and
+class discussions. Both feature multiple-choice questions as well as brief
+short-answer questions; you will take them in class.
+
+For each of our five units in the course, I will post a **discussion prompt**
+to Canvas. These prompts ask you to draw connections between course texts and
+considerations regarding social and personal responsibility. You may either
+respond directly to this prompt, or to one of your peers' responses. Responses
+should be 100-200 words long, and you must answer four out of five total
+prompts. Doing so fulfills the written communication requirement of the KLPC
+designation as well as this designation's social and personal responsibility
+requirements.
+
+Finally, at the end of the semester you will write a **6-8 page final paper**.
+This paper should offer a comparative analysis of two course texts. In the
+final week of classes, we will have a peer review session, where you may gain
+feedback from your classmates and provide feedback to others. This session
+fulfills the oral communication requirement of the KLPC designation. The paper
+itself fulfills the designation's critical thinking requirement.
+"""
+prerequisites = "Junior or senior classification"
+designation = "KLPC"
+
+[schedule]
+year = "2026"
+start = "08-24"
+end = "12-03"
+weekdays = "MWF" 
+time = "9:10--10:00am"
+location = "LAAH 372"
+exclude = [ "09-07", "10-21", "10-23", "11-25", "11-27" ]
+
+[[objective]]
+description = """Describe major historical trends in the development of science
+fiction"""
+
+[[objective]]
+description = """Trace common themes, formal techniques, and philosophical
+questions in the genre"""
+
+[[objective]]
+description = """Explain how science fiction often works as a reflection of the
+present and/or the past"""
+
+[[objective]]
+description = """Hone the skills necessary to situate your interpretations
+alongside the thoughts, opinions, ideas, and interpretations of others"""
+
+[[objective]]
+description = """Communicate interpretations of literary texts through written
+argument and discussion"""
+
+[[book]]
+title = "_Frankenstein: The 1818 Text_"
+author = "Mary Shelley"
+isbn = "978-0143131847"
+
+[[book]]
+title = "_Ubik_"
+author = "Philip K. Dick"
+isbn = "978-0547572291"
+
+[[book]]
+title = "_Neuromancer_"
+author = "William Gibson"
+isbn = "978-0441007462"
+
+[[book]]
+title = "_Alien_"
+author = "Ridley Scott"
+isbn = "1979"
+
+[[book]]
+title = "_Children of Men_"
+author = "Alfonso Cuarón"
+isbn = "2006"
+
+[[assignment]]
+name = "Exam 1"
+points = 20
+due = "9/25"
+
+[[assignment]]
+name = "Exam 2"
+points = 25
+due = "11/23"
+
+[[assignment]]
+name = "Final Paper"
+points = 35
+due = "12/8"
+
+[[assignment]]
+name = "Discussion Prompt Responses (4)"
+points = 10
+due = "Ongoing"
+
+[[assignment]]
+name = "Participation"
+points = 10
+due = "Ongoing"
+

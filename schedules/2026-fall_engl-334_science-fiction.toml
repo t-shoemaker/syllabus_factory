@@ -1,0 +1,356 @@
+[week-1]
+num = 1
+title = "Precursors and Origins I"
+
+  [[week-1.days]]
+  date = "8/24"
+  weekday = "Monday"
+  no_class = false
+  agenda = ["Introductions"]
+
+  [[week-1.days]]
+  date = "8/26"
+  weekday = "Wednesday"
+  no_class = false
+  agenda = ["Mary Shelley. Frankenstein: 1-44"]
+
+  [[week-1.days]]
+  date = "8/28"
+  weekday = "Friday"
+  no_class = false
+  agenda = ["Shelley, cont.: 45-77"]
+
+[week-2]
+num = 2
+title = "Precursors and Origins II"
+
+  [[week-2.days]]
+  date = "8/31"
+  weekday = "Monday"
+  no_class = false
+  agenda = ["Shelley, cont.: 78-141"]
+
+  [[week-2.days]]
+  date = "9/2"
+  weekday = "Wednesday"
+  no_class = false
+  agenda = ["Shelley, cont.: 142-178"]
+
+  [[week-2.days]]
+  date = "9/4"
+  weekday = "Friday"
+  no_class = false
+  agenda = ["Shelley, cont.: 179-216"]
+
+[week-3]
+num = 3
+title = "Precursors and Origins III"
+
+  [[week-3.days]]
+  date = "9/7"
+  weekday = "Monday"
+  no_class = true
+  agenda = []
+
+  [[week-3.days]]
+  date = "9/9"
+  weekday = "Wednesday"
+  no_class = false
+  agenda = ["E.M. Forster. The Machine Stops: Parts I-II"]
+
+  [[week-3.days]]
+  date = "9/11"
+  weekday = "Friday"
+  no_class = false
+  agenda = [
+    "Forster, cont.: Part III",
+    "**Last call:** Discussion prompt response"
+  ]
+
+[week-4]
+num = 4
+title = "Golden Age I"
+
+  [[week-4.days]]
+  date = "9/14"
+  weekday = "Monday"
+  no_class = false
+  agenda = [
+    """Orson Welles. [War of the \
+    Worlds](https://www.youtube.com/watch?v=9q7tN7MhQ4I)"""
+  ]
+
+  [[week-4.days]]
+  date = "9/16"
+  weekday = "Wednesday"
+  no_class = false
+  agenda = ["Welles, cont."]
+
+  [[week-4.days]]
+  date = "9/18"
+  weekday = "Friday"
+  no_class = false
+  agenda = [
+    """Issac Asimov. \
+    [Runaround](https://archive.org/details/Astounding_v29n01_1942-03_dtsg0318/page/n93/mode/2up)"""
+  ]
+
+
+[week-5]
+num = 5
+title = "Golden Age II"
+
+  [[week-5.days]]
+  date = "9/21"
+  weekday = "Monday"
+  no_class = false
+  agenda = [
+    """Robert Heinlein. [By His \
+    Bootstraps](https://archive.org/details/Astounding_v28n02_1941-10/page/n7/mode/2up)"""
+  ]
+
+  [[week-5.days]]
+  date = "9/23"
+  weekday = "Wednesday"
+  no_class = false
+  agenda = ["Heinlein, cont."]
+
+  [[week-5.days]]
+  date = "9/25"
+  weekday = "Friday"
+  no_class = false
+  agenda = [
+    "**In class:** Exam 1",
+    "**Last call:** Discussion prompt response"
+  ]
+
+[week-6]
+num = 6
+title = "New Wave I"
+
+  [[week-6.days]]
+  date = "9/28"
+  weekday = "Monday"
+  no_class = false
+  agenda = ["Philip K. Dick. Ubik: 1-63"]
+
+  [[week-6.days]]
+  date = "9/30"
+  weekday = "Wednesday"
+  no_class = false
+  agenda = ["Dick, cont.: 64-129"]
+
+  [[week-6.days]]
+  date = "10/2"
+  weekday = "Friday"
+  no_class = false
+  agenda = ["Dick, cont.: 130-191"]
+
+[week-7]
+num = 7
+title = "New Wave II"
+
+  [[week-7.days]]
+  date = "10/5"
+  weekday = "Monday"
+  no_class = false
+  agenda = ["Dick, cont.: 192-228"]
+
+  [[week-7.days]]
+  date = "10/7"
+  weekday = "Wednesday"
+  no_class = false
+  agenda = ["Ursula K. Le Guin. Vaster than Empires and More Slow: 181-217"]
+
+  [[week-7.days]]
+  date = "10/9"
+  weekday = "Friday"
+  no_class = false
+  agenda = ["Le Guin, cont."]
+
+[week-8]
+num = 8
+title = "New Wave III"
+
+  [[week-8.days]]
+  date = "10/12"
+  weekday = "Monday"
+  no_class = false
+  agenda = ["Octavia Butler. Bloodchild: 1-32"]
+
+  [[week-8.days]]
+  date = "10/14"
+  weekday = "Wednesday"
+  no_class = false
+  agenda = ["Octavia Butler, cont."]
+
+  [[week-8.days]]
+  date = "10/16"
+  weekday = "Friday"
+  no_class = false
+  agenda = ["Ridley Scott. Alien"]
+
+[week-9]
+num = 9
+title = "Interregnum"
+
+  [[week-9.days]]
+  date = "10/19"
+  weekday = "Monday"
+  no_class = false
+  agenda = [
+    "Scott, cont.",
+    "**Last call:** Discussion prompt response"
+  ]
+
+  [[week-9.days]]
+  date = "10/21"
+  weekday = "Wednesday"
+  no_class = true
+  agenda = []
+
+  [[week-9.days]]
+  date = "10/23"
+  weekday = "Friday"
+  no_class = true
+  agenda = []
+
+[week-10]
+num = 10
+title = "Cyberpunk I"
+
+  [[week-10.days]]
+  date = "10/26"
+  weekday = "Monday"
+  no_class = false
+  agenda = ["William Gibson. Neuromancer: 3-43"]
+
+  [[week-10.days]]
+  date = "10/28"
+  weekday = "Wednesday"
+  no_class = false
+  agenda = ["Gibson, cont.: 44-106"]
+
+  [[week-10.days]]
+  date = "10/30"
+  weekday = "Friday"
+  no_class = false
+  agenda = ["Gibson, cont.: 107-165"]
+
+[week-11]
+num = 11
+title = "Cyberpunk II"
+
+  [[week-11.days]]
+  date = "11/2"
+  weekday = "Monday"
+  no_class = false
+  agenda = ["Gibson, cont.: 166-213"]
+
+  [[week-11.days]]
+  date = "11/4"
+  weekday = "Wednesday"
+  no_class = false
+  agenda = ["Gibson, cont.: 214-256"]
+
+  [[week-11.days]]
+  date = "11/6"
+  weekday = "Friday"
+  no_class = false
+  agenda = [
+    "Gibson, cont: 257-287",
+    "**Last call:** Discussion prompt response"
+  ]
+
+[week-12]
+num = 12
+title = "Contemporary I"
+
+  [[week-12.days]]
+  date = "11/9"
+  weekday = "Monday"
+  no_class = false
+  agenda = ["Alfonso Cuarón. Children of Men"]
+
+  [[week-12.days]]
+  date = "11/11"
+  weekday = "Wednesday"
+  no_class = false
+  agenda = ["Cuarón, cont."]
+
+  [[week-12.days]]
+  date = "11/13"
+  weekday = "Friday"
+  no_class = false
+  agenda = ["Jon Bois. [17776](https://www.sbnation.com/a/17776-football)"]
+
+[week-13]
+num = 13
+title = "Contemporary II"
+
+  [[week-13.days]]
+  date = "11/16"
+  weekday = "Monday"
+  no_class = false
+  agenda = ["Ted Chiang. Story of Your Life: 91-145"]
+
+  [[week-13.days]]
+  date = "11/18"
+  weekday = "Wednesday"
+  no_class = false
+  agenda = ["Chiang, cont."]
+
+  [[week-13.days]]
+  date = "11/20"
+  weekday = "Friday"
+  no_class = false
+  agenda = [
+    """N.K. Jemisin. \
+    [Valedictorian](https://www.lightspeedmagazine.com/fiction/valedictorian/)""",
+    "**Last call:** Discussion prompt response"
+  ]
+
+[week-14]
+num = 14
+title = "Wrap-up"
+
+  [[week-14.days]]
+  date = "11/23"
+  weekday = "Monday"
+  no_class = false
+  agenda = ["**In class:** Exam 2"]
+
+  [[week-14.days]]
+  date = "11/25"
+  weekday = "Wednesday"
+  no_class = true
+  agenda = []
+
+  [[week-14.days]]
+  date = "11/27"
+  weekday = "Friday"
+  no_class = true
+  agenda = []
+
+[week-15]
+num = 15
+title = "Review"
+
+  [[week-15.days]]
+  date = "11/30"
+  weekday = "Monday"
+  no_class = false
+  agenda = ["Peer Review"]
+
+  [[week-15.days]]
+  date = "12/1"
+  weekday = "Tuesday"
+  no_class = false
+  agenda = ["Paper Workshop"]
+
+  [[week-15.days]]
+  date = "12/2"
+  weekday = "Wednesday"
+  no_class = false
+  agenda = ["Paper Workshop"]
+
