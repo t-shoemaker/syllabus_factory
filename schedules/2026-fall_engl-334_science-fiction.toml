@@ -132,19 +132,21 @@ title = "New Wave I"
   date = "9/28"
   weekday = "Monday"
   no_class = false
-  agenda = ["Philip K. Dick. Ubik: 1-63"]
+  agenda = [
+    """Pamela Zoline. \
+    [The Heat Death of the Universe](https://101bananas.com/library2/heatdeath2.html)"""]
 
   [[week-6.days]]
   date = "9/30"
   weekday = "Wednesday"
   no_class = false
-  agenda = ["Dick, cont.: 64-129"]
+  agenda = ["Philip K. Dick. Ubik: 1-63"]
 
   [[week-6.days]]
   date = "10/2"
   weekday = "Friday"
   no_class = false
-  agenda = ["Dick, cont.: 130-191"]
+  agenda = ["Dick, cont.: 64-129"]
 
 [week-7]
 num = 7
@@ -154,19 +156,19 @@ title = "New Wave II"
   date = "10/5"
   weekday = "Monday"
   no_class = false
-  agenda = ["Dick, cont.: 192-228"]
+  agenda = ["Dick, cont.: 130-191"]
 
   [[week-7.days]]
   date = "10/7"
   weekday = "Wednesday"
   no_class = false
-  agenda = ["Ursula K. Le Guin. Vaster than Empires and More Slow: 181-217"]
+  agenda = ["Dick, cont.: 192-228"]
 
   [[week-7.days]]
   date = "10/9"
   weekday = "Friday"
-  no_class = false
-  agenda = ["Le Guin, cont."]
+  no_class = true 
+  agenda = []
 
 [week-8]
 num = 8

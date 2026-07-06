@@ -69,7 +69,7 @@ end = "12-03"
 weekdays = "MWF" 
 time = "12:40--1:30pm"
 location = "LAAH 372"
-exclude = [ "09-07", "10-21", "10-23", "11-25", "11-27" ]
+exclude = [ "09-07", "10-09", "10-21", "10-23", "11-25", "11-27" ]
 
 [[objective]]
 description = """Identify and describe key themes and ideas in the history of

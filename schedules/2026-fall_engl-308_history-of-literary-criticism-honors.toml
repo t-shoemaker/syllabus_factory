@@ -109,7 +109,7 @@ title = "Invention"
   date = "9/25"
   weekday = "Friday"
   no_class = false
-  agenda = ["Aphra Behn. Preface to The Lucky Chance: 334-337"]
+  agenda = ["Joseph Addison. The Spectator, No. 62 and 412: 360-367"]
 
 [week-6]
 num = 6
@@ -125,13 +125,13 @@ title = "Criticism"
   date = "9/30"
   weekday = "Wednesday"
   no_class = false
-  agenda = ["Pope, cont."]
+  agenda = ["Pope and Addison, cont."]
 
   [[week-6.days]]
   date = "10/2"
   weekday = "Friday"
   no_class = false
-  agenda = ["David Hume. Of the Standard of Taste: 410-424"]
+  agenda = ["Virigina Woolf. Shakepeare's Sister: 857-859"]
 
 [week-7]
 num = 7
@@ -141,19 +141,19 @@ title = "Judgment"
   date = "10/5"
   weekday = "Monday"
   no_class = false
-  agenda = ["Hume, cont."]
+  agenda = ["Immanuel Kant. Critique of Judgment: 425-467"]
 
   [[week-7.days]]
   date = "10/7"
   weekday = "Wednesday"
   no_class = false
-  agenda = ["Immanuel Kant. Critique of Judgment: 425-467"]
+  agenda = ["Kant, cont."]
 
   [[week-7.days]]
   date = "10/9"
   weekday = "Friday"
-  no_class = false
-  agenda = ["Kant, cont."]
+  no_class = true
+  agenda = []
 
 [week-8]
 num = 8
@@ -293,7 +293,7 @@ title = "The Unconscious"
   date = "11/20"
   weekday = "Friday"
   no_class = false
-  agenda = ["Paul Ricœur. The Conflict of Interpretations: 20-36"]
+  agenda = ["Susan Sontag. Against Interpretation: 1722-1730"]
 
 [week-14]
 num = 14
