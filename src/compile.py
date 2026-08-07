@@ -7,7 +7,7 @@ from utils import flatten_config, wrap_paragraphs
 class SyllabusValidator:
     """Validates syllabus data before compilation."""
 
-    REQUIRED = ["instructor", "course", "schedule"]
+    REQUIRED = ("instructor", "course", "schedule")
 
     def validate(self, syllabus_data):
         """Validate required fields and data types.
@@ -253,11 +253,11 @@ class SyllabusDataFormatter:
     """Handles all syllabus data transformations."""
 
     tables = ("assignment", "book", "objective")
-    descriptors = [
+    descriptors = (
         ("catalog_description", "course_catalog"),
         ("section_description", "course_description"),
         ("assignment_description", "course_assignments"),
-    ]
+    )
 
     def __init__(self, syllabus_data, schedule):
         """Initialize the object.

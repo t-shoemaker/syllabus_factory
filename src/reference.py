@@ -101,7 +101,7 @@ class MSRParser(HTMLParser):
         path = None
 
         try:
-            path, headers = urlretrieve(request)
+            path, _ = urlretrieve(request)
             filename = available[select].name if not filename else filename
             shutil.move(path, filename)
             print(f"Successfully downloaded: {available[select].name}")
@@ -123,7 +123,7 @@ def get_reference_docx(filename):
     filename : Path
         Name of the output file
     """
-    path, headers = urlretrieve(MSR_PAGE)
+    path, _ = urlretrieve(MSR_PAGE)
     with open(path, "r") as fin:
         html = fin.read()
 

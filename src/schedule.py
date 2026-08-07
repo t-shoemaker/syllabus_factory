@@ -1,5 +1,6 @@
 import calendar
 from datetime import datetime, timedelta
+from types import MappingProxyType
 
 from templates import ScheduleEntry
 
@@ -8,8 +9,10 @@ class Scheduler:
     """Scheduler for compiling and rendering TOML schedules."""
 
     date_format = "%Y-%m-%d"
-    day_abbr = list(calendar.day_abbr)
-    weekday_map = {"M": "Mon", "T": "Tue", "W": "Wed", "R": "Thu", "F": "Fri"}
+    day_abbr = tuple(calendar.day_abbr)
+    weekday_map = MappingProxyType(
+        {"M": "Mon", "T": "Tue", "W": "Wed", "R": "Thu", "F": "Fri"}
+    )
 
     def _convert_weekdays(self, *weekdays):
         """Convert abbreviated weekdays to integer values.
