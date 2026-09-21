@@ -253,6 +253,7 @@ class SyllabusDataFormatter:
     """Handles all syllabus data transformations."""
 
     tables = ("assignment", "book", "objective")
+    no_books = "No books are required for purchase."
     descriptors = (
         ("catalog_description", "course_catalog"),
         ("section_description", "course_description"),
@@ -314,7 +315,21 @@ class SyllabusDataFormatter:
         """Format TOML table arrays."""
         for item_type in self.tables:
             if item_type not in self.data:
+                if item_type == "book" and "books" not in self.data:
+                    self.data["books"] = self.no_books
+
                 continue
+
+            if item_type == "book":
+                entries = self.data[item_type]
+                if all(
+                    not entry.get("title", "").strip()
+                    and not entry.get("author", "").strip()
+                    and not entry.get("isbn", "").strip()
+                    for entry in entries
+                ):
+                    self.data["books"] = self.no_books
+                    continue
 
             md = self.registry.format(item_type, self.data[item_type])
             self.data[f"{item_type}s"] = md
