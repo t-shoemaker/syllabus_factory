@@ -1,0 +1,126 @@
+[instructor]
+name = "Tyler Shoemaker"
+email = "tshoemaker@tamu.edu"
+office = "LAAH 480"
+hours = "T 1:00--3:00pm"
+
+[course]
+number = "ENGL 401"
+title = "Contemporary Literary Theory"
+section = 500
+credits = 3
+catalog = """
+Exposure to the discourses of contemporary theory in engagement with other
+academic disciplines; study of major theoretical schools, debates and critiques
+in the 20th and 21st centuries. Topics vary. Instructors teaching this class
+will choose texts, assessments and approaches that represent current
+scholarship and satisfy course learning objectives. 
+"""
+description = """
+Our theme this semester is mediation: What intervenes between our experience of
+the world and the world as such? Whereas older traditions of criticism could
+trust that the mind or the artwork faithfully mirrors reality, modern thought
+grows suspicious: perhaps there is no outside to the systems---language, media,
+technology, institutions, ideologies---that shape our thinking, no neutral
+vantage from which to test thought against the world. If that is the case, what
+then? Our readings pick up in the wake of this shift, tracking the problem of
+mediation across art, language, culture, politics, and psychic life. We will
+work through several major schools of twentieth-century thought before turning
+to the latest work in contemporary literary theory.
+
+**Content note --** Since Plato's _Republic_, literary-critical thought has
+foregrounded the social role of art and criticism. In many of our readings, we
+will encounter critics who explicitly tie their work to various social and
+political dynamics, including those that concern race, gender, sexuality,
+class, and other axes of identity and power. While students will never be
+required to adopt a specific opinion with respect to these matters, you can
+expect to engage with challenging ideas, encounter perspectives that may differ
+from your own, and think critically about how critics envision their own place
+within social and political contexts.
+"""
+assignments = """
+During the semester you will write a pair of 3- to 4-page **keyword entries**.
+For each entry, you will identify a central term across 2-4 course readings and
+synthesize how these texts define and elaborate that term. Those texts may
+share this project of definition, with authors mutually extending each other's
+ideas. In other cases, they might disagree, and your selected term becomes a
+flashpoint for some major shift in critical discourse. However this discourse
+unfolds, the purpose of this assignment is to inventory major debates and
+criticism across literary theory, synthesize different arguments, and produce
+your own commentary about key concepts in the course.
+
+At the end of the semester, you will address the present. This work entails
+constructing a 7- to 8-page **annotated bibliography** about a current trend
+in literary theory. This bibliography will support a **project proposal** (2
+pages), in which you envision and frame a research project that situates the
+entries in your bibliography with respect to a major through line in our course
+readings.
+"""
+prerequisites = """3 credits of literature at 200-level or above; junior or
+senior classification"""
+designation = "None"
+
+[schedule]
+year = "2027"
+start = "01-19"
+end = "05-04"
+weekdays = "TR" 
+time = "11:10am--12:25pm"
+location = "LAAH 372"
+exclude = [ "03-16", "03-18", "03-23", "03-25" ]
+
+[[objective]]
+description = """Identify and describe key themes and ideas in modern and
+contemporary literary theory"""
+
+[[objective]]
+description = """Trace the development of various critical movements and
+approaches"""
+
+[[objective]]
+description = """Explain how critics develop their own interpretations and
+arguments in response to other critics"""
+
+[[objective]]
+description = """Hone the skills necessary to situate one's interpretations
+alongside the thoughts, opinions, ideas, and interpretations of others"""
+
+[[objective]]
+description = """Analyze critical arguments and use them to construct arguments
+of one's own"""
+
+[[book]]
+title = "_The Norton Anthology of Theory and Criticism_, 3rd ed."
+author = "Leitch et al"
+isbn = "978-0393602951"
+
+[[assignment]]
+name = "Keyword Entry 1"
+points = 20
+due = "2/23"
+
+[[assignment]]
+name = "Keyword Entry 2"
+points = 20
+due = "4/13"
+
+[[assignment]]
+name = "Annotated Bibliography Sketch"
+points = 5
+due = "3/25"
+
+[[assignment]]
+name = "Annotated Bibliography"
+points = 25
+due = "5/4"
+
+[[assignment]]
+name = "Project Proposal"
+points = 20
+due = "5/4"
+
+[[assignment]]
+name = "Participation"
+points = 10
+due = "Ongoing"
+

@@ -1,0 +1,278 @@
+[week-1]
+num = 1
+title = "Semiotics"
+
+  [[week-1.days]]
+  date = "1/19"
+  weekday = "Tuesday"
+  no_class = false
+  agenda = ["Introductions"]
+
+  [[week-1.days]]
+  date = "1/21"
+  weekday = "Thursday"
+  no_class = false
+  agenda = ["Ferdinand de Saussure. Course in General Linguistics: 824-841"]
+
+[week-2]
+num = 2
+title = "Language and Signification"
+
+  [[week-2.days]]
+  date = "1/26"
+  weekday = "Tuesday"
+  no_class = false
+  agenda = [
+    "Saussure, cont.",
+    """Roman Jakobson. Two Aspects of Language and Two Types of Aphasic
+    Disturbances: 1074-1078"""
+  ]
+
+  [[week-2.days]]
+  date = "1/28"
+  weekday = "Thursday"
+  no_class = false
+  agenda = ["Julia Kristeva. Revolution in Poetic Language: 1942-1952"]
+
+[week-3]
+num = 3
+title = "Psychic Structure"
+
+  [[week-3.days]]
+  date = "2/2"
+  weekday = "Tuesday"
+  no_class = false
+  agenda = [
+    "Jacques Lacan. The Agency of the Letter in the Unconscious: 1117-1129"
+  ]
+
+  [[week-3.days]]
+  date = "2/4"
+  weekday = "Thursday"
+  no_class = false
+  agenda = ["Lacan, cont."]
+
+[week-4]
+num = 4
+title = "Subjectivity and Subjection"
+
+  [[week-4.days]]
+  date = "2/9"
+  weekday = "Tuesday"
+  no_class = false
+  agenda = ["Michel Foucault. Discipline and Punish: 1409-1421"]
+
+  [[week-4.days]]
+  date = "2/11"
+  weekday = "Thursday"
+  no_class = false
+  agenda = ["Judith Butler. The Psychic Life of Power: 10-22"]
+
+[week-5]
+num = 5
+title = "Deconstruction"
+
+  [[week-5.days]]
+  date = "2/16"
+  weekday = "Tuesday"
+  no_class = false
+  agenda = ["Jacques Derrida. Différance: 3-27"]
+
+  [[week-5.days]]
+  date = "2/18"
+  weekday = "Thursday"
+  no_class = false
+  agenda = ["Derrida, cont."]
+
+[week-6]
+num = 6
+title = "Cultural Reproduction"
+
+  [[week-6.days]]
+  date = "2/23"
+  weekday = "Tuesday"
+  no_class = false
+  agenda = [
+    "Antonio Gramsci. The Formation of the Intellectuals: 929-935",
+    "**Due:** Keyword Entry 1",
+  ]
+
+
+  [[week-6.days]]
+  date = "2/25"
+  weekday = "Thursday"
+  no_class = false
+  agenda = [
+    """Walter Benjamin. The Work of Art in the Age of Its Technological 
+    Reproducibility: 976-996"""
+  ]
+
+[week-7]
+num = 7
+title = "Ideology"
+
+  [[week-7.days]]
+  date = "3/2"
+  weekday = "Tuesday"
+  no_class = false
+  agenda = [
+    """Louis Althusser. Ideology and Ideological State Apparatuses:
+    1285-1311"""
+  ]
+
+  [[week-7.days]]
+  date = "3/4"
+  weekday = "Thursday"
+  no_class = false
+  agenda = ["Althusser, cont."]
+
+[week-8]
+num = 8
+title = "Structuring Absences"
+
+  [[week-8.days]]
+  date = "3/9"
+  weekday = "Tuesday"
+  no_class = false
+  agenda = ["Edward Said. Orientalism: 1783-1805"]
+
+  [[week-8.days]]
+  date = "3/11"
+  weekday = "Thursday"
+  no_class = false
+  agenda = ["Toni Morrison. Unspeakable Things Unspoken: 1673-1684"]
+
+[week-9]
+num = 9
+title = "Spring Break"
+
+  [[week-9.days]]
+  date = "3/16"
+  weekday = "Tuesday"
+  no_class = true
+  agenda = []
+
+  [[week-9.days]]
+  date = "3/18"
+  weekday = "Thursday"
+  no_class = true
+  agenda = []
+
+[week-10]
+num = 10
+title = "Reading Week: Preparing for the Annotated Bibliography"
+
+  [[week-10.days]]
+  date = "3/23"
+  weekday = "Tuesday"
+  no_class = true
+  agenda = []
+
+  [[week-10.days]]
+  date = "3/25"
+  weekday = "Thursday"
+  no_class = false
+  agenda = [
+    "**No class**",
+    "**Due:** Annotated Bibliography Sketch",
+  ]
+
+[week-11]
+num = 11
+title = "Cultural Tactics"
+
+  [[week-11.days]]
+  date = "3/30"
+  weekday = "Tuesday"
+  no_class = false
+  agenda = ["Laura Mulvey. Visual Pleasure and Narrative Cinema: 1954-1965"]
+
+  [[week-11.days]]
+  date = "4/1"
+  weekday = "Thursday"
+  no_class = false
+  agenda = ["Stuart Hall. Encoding/Decoding: 163-174"]
+
+[week-12]
+num = 12
+title = "Postmodernity and Technoculture"
+
+  [[week-12.days]]
+  date = "4/6"
+  weekday = "Tuesday"
+  no_class = false
+  agenda = ["Jean Baudrillard. The Precession of Simulacra: 1483-1492"]
+
+  [[week-12.days]]
+  date = "4/8"
+  weekday = "Thursday"
+  no_class = false
+  agenda = ["Donna Haraway. A Manifesto for Cyborgs: 2066-2088"]
+
+[week-13]
+num = 13
+title = "Archives, Absences"
+
+  [[week-13.days]]
+  date = "4/13"
+  weekday = "Tuesday"
+  no_class = false
+  agenda = [
+    "Saidiya Hartman. Venus in Two Acts: 1-14",
+    "**Due:** Keyword Entry 2",
+  ]
+
+  [[week-13.days]]
+  date = "4/15"
+  weekday = "Thursday"
+  no_class = false
+  agenda = [
+    """Hito Steyerl. [In Defense of the Poor 
+    Image](https://www.e-flux.com/journal/10/61362/in-defense-of-the-poor-image)"""
+  ]
+
+[week-14]
+num = 14
+title = "Immediacy"
+
+  [[week-14.days]]
+  date = "4/20"
+  weekday = "Tuesday"
+  no_class = false
+  agenda = ["Rita Felski. The Limits of Critique: 1-13"]
+
+  [[week-14.days]]
+  date = "4/22"
+  weekday = "Thursday"
+  no_class = false
+  agenda = ["Anna Kornbluh. Immediacy: 1-23"]
+
+[week-15]
+num = 15
+title = "Peer Review"
+
+  [[week-15.days]]
+  date = "4/27"
+  weekday = "Tuesday"
+  no_class = false
+  agenda = ["Peer review: Annotated bibliography"]
+
+  [[week-15.days]]
+  date = "4/29"
+  weekday = "Thursday"
+  no_class = false
+  agenda = ["Peer review: Annotated bibliography"]
+
+[week-16]
+num = 16
+title = "No Class"
+
+  [[week-16.days]]
+  date = "5/4"
+  weekday = "Tuesday"
+  no_class = false
+  agenda = [
+    "**No class:** Redefined day",
+    "**Due:** Project Proposal and Annotated Bibliography",
+  ]
+
