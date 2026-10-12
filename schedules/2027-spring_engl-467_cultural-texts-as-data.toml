@@ -1,0 +1,308 @@
+[week-1]
+num = 1
+title = "After GPT-2"
+
+  [[week-1.days]]
+  date = "1/19"
+  weekday = "Tuesday"
+  no_class = false
+  agenda = ["Introductions"]
+
+  [[week-1.days]]
+  date = "1/21"
+  weekday = "Thursday"
+  no_class = false
+  agenda = [
+    """OpenAI. [Better Language Models and Their
+    Implications](https://openai.com/index/better-language-models/)""",
+    """John Pavlus. [When ChatGPT Broke an Entire
+    Field](https://www.quantamagazine.org/when-chatgpt-broke-an-entire-field-an-oral-history-20250430/)"""
+  ]
+
+[week-2]
+num = 2
+title = "Critical AI"
+
+  [[week-2.days]]
+  date = "1/26"
+  weekday = "Tuesday"
+  no_class = false
+  agenda = [
+    "Rita Raley and Jennifer Rhee. Critical AI: A Field in Formation: 185-204",
+    """Henry Farrell et al. Large AI Models are Cultural and Social
+    Technologies: 1153-1156""",
+  ]
+
+  [[week-2.days]]
+  date = "1/28"
+  weekday = "Thursday"
+  no_class = false
+  agenda = ["Lab: Python basics"]
+
+[week-3]
+num = 3
+title = "Tokenization"
+
+  [[week-3.days]]
+  date = "2/2"
+  weekday = "Tuesday"
+  no_class = false
+  agenda = ["Lydia Liu. The Invention of Printed English: 39-98"]
+
+  [[week-3.days]]
+  date = "2/4"
+  weekday = "Thursday"
+  no_class = false
+  agenda = [
+    "Lab: Model inputs",
+    "**Due:** Practicum 1"
+  ]
+
+[week-4]
+num = 4
+title = "Embeddings"
+
+  [[week-4.days]]
+  date = "2/9"
+  weekday = "Tuesday"
+  no_class = false
+  agenda = [
+    "Melanie Mitchell. Words, and the Company They Keep: 203-225",
+    "Neal Agarwal. [Infinite Craft](https://neal.fun/infinite-craft)"
+  ]
+
+  [[week-4.days]]
+  date = "2/11"
+  weekday = "Thursday"
+  no_class = false
+  agenda = [
+    "Lab: Embeddings and vector space",
+    "**Due:** Practicum 2" 
+  ]
+
+[week-5]
+num = 5
+title = "Attention"
+
+  [[week-5.days]]
+  date = "2/16"
+  weekday = "Tuesday"
+  no_class = false
+  agenda = [
+    "Ferdinand de Saussure. Course in General Linguistics: 824-841",
+    "Leif Weatherby. Computational Meaning: 139-172"
+  ]
+
+  [[week-5.days]]
+  date = "2/18"
+  weekday = "Thursday"
+  no_class = false
+  agenda = [
+    "Lab: The attention mechanism",
+    "**Due:** Practicum 3"
+  ]
+
+[week-6]
+num = 6
+title = "Next Token Prediction"
+
+  [[week-6.days]]
+  date = "2/23"
+  weekday = "Tuesday"
+  no_class = false
+  agenda = [
+    "Emily M. Bender et al. On the Dangers of Stochastic Parrots: 1-14",
+    "Mercedes Bunz. Thinking Through Generated Writing: 58-84"
+  ]
+
+  [[week-6.days]]
+  date = "2/25"
+  weekday = "Thursday"
+  no_class = false
+  agenda = [
+    "Lab: Next token prediction",
+    "**Due:** Practicum 4"
+  ]
+
+[week-7]
+num = 7
+title = "Sampling"
+
+  [[week-7.days]]
+  date = "3/2"
+  weekday = "Tuesday"
+  no_class = false
+  agenda = [
+    """Fabian Offert and Ranjodh Singh Dhaliwal. The Method of Critical AI
+    Studies: 1-10""",
+    "Hannes Bajohr. Surface Reading LLMs: 1-18"
+  ]
+
+  [[week-7.days]]
+  date = "3/4"
+  weekday = "Thursday"
+  no_class = false
+  agenda = ["Lab: Sampling strategies"]
+
+[week-8]
+num = 8
+title = "Reviewing the Model Pipeline"
+
+  [[week-8.days]]
+  date = "3/9"
+  weekday = "Tuesday"
+  no_class = false
+  agenda = [
+    """James E. Dobson. On Reading and Interpreting Black Box Deep Neural
+    Networks: 431-449""",
+    "**Due:** Practicum 5"
+  ]
+
+  [[week-8.days]]
+  date = "3/11"
+  weekday = "Thursday"
+  no_class = false
+  agenda = ["Review day"]
+
+[week-9]
+num = 9
+title = "Spring Break"
+
+  [[week-9.days]]
+  date = "3/16"
+  weekday = "Tuesday"
+  no_class = true
+  agenda = []
+
+  [[week-9.days]]
+  date = "3/18"
+  weekday = "Thursday"
+  no_class = true
+  agenda = []
+
+[week-10]
+num = 10
+title = "No Class: Preparing for the Final Project"
+
+  [[week-10.days]]
+  date = "3/23"
+  weekday = "Tuesday"
+  no_class = true
+  agenda = []
+
+  [[week-10.days]]
+  date = "3/25"
+  weekday = "Thursday"
+  no_class = false
+  agenda = [
+    "**No class**",
+    "**Due:** Final project proposal",
+  ]
+
+[week-11]
+num = 11
+title = "Instruction Tuning"
+
+  [[week-11.days]]
+  date = "3/30"
+  weekday = "Tuesday"
+  no_class = false
+  agenda = [
+    """Sarah Burkhardt and Bernhard Rieder. Foundation Models are Platform
+    Models: 1-15""",
+    """Nathan Lambert et al. [Illustrating Reinforcement Learning from Human
+    Feedback](https://huggingface.co/blog/rlhf)"""
+  ]
+
+  [[week-11.days]]
+  date = "4/1"
+  weekday = "Thursday"
+  no_class = false
+  agenda = ["Lab: Instruct-tuning"]
+
+[week-12]
+num = 12
+title = "Datasets and Benchmarks"
+
+  [[week-12.days]]
+  date = "4/6"
+  weekday = "Tuesday"
+  no_class = false
+  agenda = [
+    """Christo Buschek and Jer Thorp. [Models All the Way
+    Down](https://knowingmachines.org/models-all-the-way)""",
+    """Benjamin Recht. [Benchmarking
+    Culture](https://www.argmin.net/p/benchmarking-culture)"""
+  ]
+
+  [[week-12.days]]
+  date = "4/8"
+  weekday = "Thursday"
+  no_class = false
+  agenda = ["Lab: Datasets and benchmarks"]
+
+[week-13]
+num = 13
+title = "Agentic AI"
+
+  [[week-13.days]]
+  date = "4/13"
+  weekday = "Tuesday"
+  no_class = false
+  agenda = [
+    "Paul Kockelman. Last Words: 7-29, 49-58",
+    """Simon Willison. [What Is Agentic
+    Engineering?](https://simonwillison.net/guides/agentic-engineering-patterns/what-is-agentic-engineering/)"""
+  ]
+
+  [[week-13.days]]
+  date = "4/15"
+  weekday = "Thursday"
+  no_class = false
+  agenda = ["Lab: Agentic AI"]
+
+[week-14]
+num = 14
+title = "Final Projects I"
+
+  [[week-14.days]]
+  date = "4/20"
+  weekday = "Tuesday"
+  no_class = false
+  agenda = ["Lab: Final project work"]
+
+  [[week-14.days]]
+  date = "4/22"
+  weekday = "Thursday"
+  no_class = false
+  agenda = ["Lab: Final project work"]
+
+[week-15]
+num = 15
+title = "Final Projects II"
+
+  [[week-15.days]]
+  date = "4/27"
+  weekday = "Tuesday"
+  no_class = false
+  agenda = ["Final project presentations"]
+
+  [[week-15.days]]
+  date = "4/29"
+  weekday = "Thursday"
+  no_class = false
+  agenda = [
+    "Final project presentations",
+    "**Due:** Final project",
+  ]
+
+[week-16]
+num = 16
+title = "No Class"
+
+  [[week-16.days]]
+  date = "5/4"
+  weekday = "Tuesday"
+  no_class = false
+  agenda = ["Redefined day: No class"]
+

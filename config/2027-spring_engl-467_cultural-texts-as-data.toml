@@ -1,0 +1,123 @@
+[instructor]
+name = "Tyler Shoemaker"
+email = "tshoemaker@tamu.edu"
+office = "LAAH 480"
+hours = "T 1:00-3:00pm"
+
+[course]
+number = "ENGL/GLAC 467"
+title = "Cultural Texts as Data"
+section = 500
+credits = 3
+catalog = """
+Exploration of concepts, tools, methods, and approaches to computationally
+manipulating cultural texts and large text corpora such as academic databases
+and newspaper, periodical, and social media archives; identification of
+connections between cultural phenomena through analysis of patterns of meaning,
+linguistic etymologies, and cultural biases.
+"""
+description = """
+The first premise of this course is that large language models are culture
+machines. LLMs are trained on culture, and they generate culture in turn. From
+this premise, it follows that we can apply cultural critique to these models;
+this course will do just that. At the same time, we will augment that analysis
+with computational methods: the second premise of this course is that we can
+best understand LLMs as culture machines by learning how they work from the
+inside out. Accordingly, this course brings together current work on LLMs in
+the humanities and social sciences with an introduction to the computational
+methods required to understand how these models work.
+
+Topics include distributional semantics; structuralist and poststructuralist
+semiotics; the history of natural language processing; interpretability;
+dataset critique; benchmarks and evaluation; chatbots; and so-called agentic
+AI. Class sessions alternate between discussion and coding. All course code
+will be written in Python. No prior programming experience is required, though
+students should be prepared to use computational methods throughout the
+semester.
+"""
+assignments = """
+In the first half of the semester, you will complete five **practicums**:
+notebooks with a mix of coding exercises and short-answer reflections; each one
+is aligned to our lab sessions and readings. After spring break, you will work
+(either individually or in groups) toward a **final project**, which combines
+data analysis and a 4-page paper. In addition to these components, you will
+write up a short **project proposal** and present your project to your peers in
+the final week of classes.
+"""
+prerequisites = "Junior or senior classification, or approval of instructor"
+designation = "None"
+
+[schedule]
+year = "2027"
+start = "01-19"
+end = "05-04"
+weekdays = "TR" 
+time = "9:35--10:50am"
+location = "LAAH 535"
+exclude = [ "03-16", "03-18", "03-23", "03-25" ]
+
+[[objective]]
+description = """Explain the concepts and technologies that have come to
+underpin modern AI"""
+
+[[objective]]
+description = """Describe debates about the relationship between AI and
+language, meaning, communication, and understanding"""
+
+[[objective]]
+description = """Draw connections between AI technologies and the wider
+political and cultural dynamics of our current moment"""
+
+[[objective]]
+description = """Use natural language processing techniques to study
+collections of texts"""
+
+[[objective]]
+description = """Combine computational methods with humanistic inquiry to
+construct analytical arguments"""
+
+[[book]]
+title = ""
+author = ""
+isbn = ""
+
+[[assignment]]
+name = "Practicum 1: Python Basics"
+points = 10
+due = "2/4"
+
+[[assignment]]
+name = "Practicum 2: Tokenization"
+points = 10
+due = "2/11"
+
+[[assignment]]
+name = "Practicum 3: Embeddings and Vector Space"
+points = 10
+due = "2/18"
+
+[[assignment]]
+name = "Practicum 4: The Attention Mechanism"
+points = 10
+due = "2/25"
+
+[[assignment]]
+name = "Practicum 5: Sampling Strategies"
+points = 10
+due = "3/9"
+
+[[assignment]]
+name = "Final Project Proposal"
+points = 5
+due = "3/25"
+
+[[assignment]]
+name = "Final Project"
+points = 35
+due = "4/29"
+
+[[assignment]]
+name = "Participation"
+points = 10
+due = "Ongoing"
+
